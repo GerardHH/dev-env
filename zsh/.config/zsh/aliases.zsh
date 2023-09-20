@@ -1,6 +1,6 @@
 #!/bin/sh
 
-alias g='lazygit'
+alias lg='lazygit'
 alias vi='nvim'
 
 # confirm before overwriting something
