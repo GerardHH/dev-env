@@ -8,12 +8,14 @@ curl -L https://nixos.org/nix/install | sh
 
 # install packages
 nix-env -iA \
-	nixpkgs.fzf \
-	nixpkgs.lazygit \
-	nixpkgs.neovim \
-	nixpkgs.ripgrep \
-	nixpkgs.stow \
-	nixpkgs.zsh
+    nixpkgs.cargo \
+    nixpkgs.fzf \
+    nixpkgs.lazygit \
+    nixpkgs.neovim \
+    nixpkgs.nodejs_20 \
+    nixpkgs.ripgrep \
+    nixpkgs.stow \
+    nixpkgs.zsh
 
 # stow configurations
 stow nvim
