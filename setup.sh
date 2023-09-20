@@ -5,4 +5,8 @@ curl -L https://nixos.org/nix/install | sh
 . ~/.nix-profile/etc/profile.d/nix.sh
 
 # install packages
-# nix-env -iA \
+nix-env -iA \
+	nixpkgs.stow
+
+# stow configurations
+# stow <package>
