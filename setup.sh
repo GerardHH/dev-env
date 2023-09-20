@@ -6,6 +6,7 @@ curl -L https://nixos.org/nix/install | sh
 
 # install packages
 nix-env -iA \
+	nixpkgs.lazygit \
 	nixpkgs.stow
 
 # stow configurations
