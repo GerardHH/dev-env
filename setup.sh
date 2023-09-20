@@ -19,6 +19,7 @@ nix-env -iA \
 
 # stow configurations
 stow nvim
+stow ripgrep
 stow zsh
 
 # Add zsh as a login shell
