@@ -18,6 +18,7 @@ nix-env -iA \
     nixpkgs.zsh
 
 # stow configurations
+stow git
 stow nvim
 stow ripgrep
 stow zsh

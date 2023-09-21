@@ -1,0 +1,35 @@
+[alias]
+    add-whitespace-changes = !git add -A && git diff --cached --ignore-all-space | git apply --cached --reverse
+    add-without-whitespace-changes = !git diff --ignore-all-space --no-color "$@" | git apply --cached --ignore-whitespace
+    cherry-pick-environment = cherry-pick GH/vscode-environment
+    commit-amend-no-edit = commit --amend --no-edit
+    commit-amend-no-edit-all = !git commit-amend-no-edit --all
+    commit-fixup = commit --fixup
+    commit-fixup-all = commit --all --fixup
+    commit-message = commit --message
+    commit-message-all = commit --all --message
+    current-branch-name = rev-parse --abbrev-ref HEAD
+    list-tree = !git log $(git current-branch-name) --oneline --graph --decorate --remotes=*/$(git current-branch-name)
+    push-current = !git push $(git remote) $(git current-branch-name)
+    push-current-force = !git push-current --force
+    rebase-autosquash = rebase --interactive --autosquash
+    rebase-environment-onto-current = !git rebase --onto $(git cb) GH/vscode-environment^ GH/vscode-environment
+    rebase-interactive = rebase --interactive
+    reset-remote = !git reset --hard $(git remote)/$(git current-branch-name)
+    remote-branch = !git ls-remote $(git remote) $(git branch)
+    unstage-all = reset HEAD --
+[color]
+    ui = true
+[core]
+    autocrlf = input
+    editor = vi
+[diff]
+    wsErrorHighlight = all
+[merge]
+        tool = kdiff3NoAuto
+        conflictstyle = diff3
+[mergetool "kdiff3NoAuto"]
+        cmd = /usr/bin/kdiff3 --L1 \"$MERGED (Base)\" --L2 \"$MERGED (Local)\" --L3 \"$MERGED (Remote)\" -o \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
+[user]
+	name = Gerard Heshusius
+	email = gHeshusius@lely.com
