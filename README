@@ -1,4 +1,4 @@
 TODO:
 - Make the plug installation run in the zsh shell.
-- Make nvim install the plugins
+- Make nvim install the plugins (initialize the git submodule)
 - Install nerdfont
