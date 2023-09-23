@@ -17,6 +17,9 @@ nix-env -iA \
     nixpkgs.stow \
     nixpkgs.zsh
 
+# Initialize git submodules
+git submodules update --recursive --init
+
 # stow configurations
 stow git
 stow nvim
