@@ -18,6 +18,7 @@ if [ ! -L "$HOME/.nix-profile" ]; then
 
     echo "Install packages"
     nix-env --install --attr \
+        nixpkgs.eza \
         nixpkgs.cargo \
         nixpkgs.fzf \
         nixpkgs.lazygit \
