@@ -19,6 +19,7 @@ plug "$HOME/.config/zsh/exports.zsh"
 
 # Plugins
 plug "zsh-users/zsh-autosuggestions"
+plug "$HOME/.config/zsh/plugins/zsh-autosuggestions.zsh"
 plug "zap-zsh/supercharge"
 plug "zap-zsh/exa" # Plug after supercharge, for ls gets set by it
 plug "romkatv/powerlevel10k"
