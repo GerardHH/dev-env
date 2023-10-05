@@ -37,6 +37,7 @@ fi
 echo "Stow configurations"
 stow_list \
     git \
+    lazygit \
     nvim \
     ripgrep \
     zsh
