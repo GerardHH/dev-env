@@ -18,10 +18,11 @@ if [ ! -L "$HOME/.nix-profile" ]; then
 
     echo "Install packages"
     nix-env --install --attr \
-        nixpkgs.eza \
         nixpkgs.cargo \
+        nixpkgs.eza \
         nixpkgs.fzf \
         nixpkgs.lazygit \
+        nixpkgs.lua \
         nixpkgs.neovim \
         nixpkgs.nodejs_20 \
         nixpkgs.ripgrep \
