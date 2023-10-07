@@ -27,6 +27,7 @@ if [ ! -L "$HOME/.nix-profile" ]; then
         nixpkgs.nodejs_20 \
         nixpkgs.ripgrep \
         nixpkgs.stow \
+        nixpkgs.xclip \
         nixpkgs.zsh
 fi
 
