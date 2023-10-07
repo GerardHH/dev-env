@@ -5,31 +5,31 @@ function stow_list()
     for package in "$@"
     do
         echo "stow $package"
-        stow "$package" 2> /dev/null
+        stow "$package"
     done
 }
 
 if [ ! -L "$HOME/.nix-profile" ]; then
     echo "Install nix"
     curl -L https://nixos.org/nix/install | sh
-
-    echo "Source nix"
-    . ~/.nix-profile/etc/profile.d/nix.sh
-
-    echo "Install packages"
-    nix-env --install --attr \
-        nixpkgs.cargo \
-        nixpkgs.eza \
-        nixpkgs.fzf \
-        nixpkgs.lazygit \
-        nixpkgs.lua \
-        nixpkgs.neovim \
-        nixpkgs.nodejs_20 \
-        nixpkgs.ripgrep \
-        nixpkgs.stow \
-        nixpkgs.xclip \
-        nixpkgs.zsh
 fi
+
+echo "Source nix"
+. ~/.nix-profile/etc/profile.d/nix.sh
+
+echo "Install packages"
+nix-env --install --attr \
+    nixpkgs.cargo \
+    nixpkgs.eza \
+    nixpkgs.fzf \
+    nixpkgs.lazygit \
+    nixpkgs.lua \
+    nixpkgs.neovim \
+    nixpkgs.nodejs_20 \
+    nixpkgs.ripgrep \
+    nixpkgs.stow \
+    nixpkgs.xclip \
+    nixpkgs.zsh
 
 if git submodule status | grep --quiet '^-'; then
     echo "Initialize git submodules"
