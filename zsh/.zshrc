@@ -13,15 +13,15 @@ fi
 # Source Nix
 if [ -e /home/gerard/.nix-profile/etc/profile.d/nix.sh ]; then . /home/gerard/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
+# Plugins
+plug "joshskidmore/zsh-fzf-history-search"
+plug "romkatv/powerlevel10k"
+plug "zsh-users/zsh-syntax-highlighting"
+
 # Source
 plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/exports.zsh"
 
-# Plugins
-plug "zsh-users/zsh-autosuggestions"
-plug "zap-zsh/supercharge"
-plug "romkatv/powerlevel10k"
-plug "zsh-users/zsh-syntax-highlighting"
 plug "$HOME/.config/zsh/plugins/eza.zsh"
 
 # Load and initialise completion system
