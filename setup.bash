@@ -19,8 +19,8 @@ echo "Source nix"
 
 echo "Install packages"
 nix-env --install --attr \
-    nixpkgs.cargo \
     nixpkgs.bat \
+    nixpkgs.cargo \
     nixpkgs.eza \
     nixpkgs.fd \
     nixpkgs.fzf \
@@ -28,6 +28,7 @@ nix-env --install --attr \
     nixpkgs.lua \
     nixpkgs.neovim \
     nixpkgs.nodejs_20 \
+    nixpkgs.ranger \
     nixpkgs.ripgrep \
     nixpkgs.stow \
     nixpkgs.tmux \
@@ -44,6 +45,7 @@ stow_list \
     git \
     lazygit \
     nvim \
+    ranger \
     ripgrep \
     tmux \
     zsh
