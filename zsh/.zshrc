@@ -19,7 +19,6 @@ plug "$HOME/.config/zsh/exports.zsh"
 
 # Plugins
 plug "zsh-users/zsh-autosuggestions"
-plug "$HOME/.config/zsh/plugins/zsh-autosuggestions.zsh"
 plug "zap-zsh/supercharge"
 plug "romkatv/powerlevel10k"
 plug "zsh-users/zsh-syntax-highlighting"
