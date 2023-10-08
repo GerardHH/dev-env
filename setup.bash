@@ -21,6 +21,7 @@ echo "Install packages"
 nix-env --install --attr \
     nixpkgs.cargo \
     nixpkgs.eza \
+    nixpkgs.fd \
     nixpkgs.fzf \
     nixpkgs.lazygit \
     nixpkgs.lua \
