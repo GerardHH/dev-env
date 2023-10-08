@@ -29,6 +29,7 @@ nix-env --install --attr \
     nixpkgs.nodejs_20 \
     nixpkgs.ripgrep \
     nixpkgs.stow \
+    nixpkgs.tmux \
     nixpkgs.xclip \
     nixpkgs.zsh
 
@@ -43,7 +44,16 @@ stow_list \
     lazygit \
     nvim \
     ripgrep \
+    tmux \
     zsh
+
+TPM_DIR=$HOME/.config/tmux/plugins/tpm
+if [ ! -d "$TPM_DIR" ]; then
+    echo "Install tmux package manager"
+    mkdir -p $TPM_DIR
+    git clone https://github.com/tmux-plugins/tpm $TPM_DIR
+    $TPM_DIR/scripts/install_plugins.sh
+fi
 
 SHELLS=/etc/shells
 if ! grep --quiet '.nix-profile/bin/zsh' "$SHELLS"; then

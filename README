@@ -2,7 +2,6 @@ TODO:
 - Research configurable (i.e. autocomplete or popup) commands
 - Auto setup nerdfont
 - Alacrity shell emulator
-- tmux
 - zsh:
 -- Use fd instead of find
 -- diff-so-fancy better git diffs
