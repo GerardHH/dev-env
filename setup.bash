@@ -20,6 +20,7 @@ echo "Source nix"
 echo "Install packages"
 nix-env --install --attr \
     nixpkgs.cargo \
+    nixpkgs.bat \
     nixpkgs.eza \
     nixpkgs.fd \
     nixpkgs.fzf \
