@@ -3,7 +3,4 @@ TODO:
 - Auto setup nerdfont
 - Alacrity shell emulator
 - zsh:
--- Use fd instead of find
 -- diff-so-fancy better git diffs
--- fuzzy-fs fuzzy file system navigator
--- fzf-tab fuzzy find over completions
