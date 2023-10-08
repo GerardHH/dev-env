@@ -21,9 +21,9 @@ plug "$HOME/.config/zsh/exports.zsh"
 plug "zsh-users/zsh-autosuggestions"
 plug "$HOME/.config/zsh/plugins/zsh-autosuggestions.zsh"
 plug "zap-zsh/supercharge"
-plug "zap-zsh/exa" # Plug after supercharge, for ls gets set by it
 plug "romkatv/powerlevel10k"
 plug "zsh-users/zsh-syntax-highlighting"
+plug "$HOME/.config/zsh/plugins/eza.zsh"
 
 # Load and initialise completion system
 autoload -Uz compinit
