@@ -19,7 +19,5 @@ _fzf_compgen_dir() {
     fd --type d --hidden --follow --exclude ".git" . "$1"
 }
 
-# Fuzzy cd from home
-alias hcd="cd ~ && cd \$(fd --hidden --type directory --exclude '.git' . | fzf)"
-# Fuzzy cd from root
-alias hcd="cd / && cd \$(fd --hidden --type directory --exclude '.git' . | fzf)"
+# Fuzzy cd
+alias fcd="cd \$(fd --type directory --hidden --follow --exclude '.git' . | fzf)"
