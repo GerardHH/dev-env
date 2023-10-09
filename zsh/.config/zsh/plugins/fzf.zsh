@@ -11,12 +11,15 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 # - The first argument to the function ($1) is the base path to start traversal
 # - See the source code (completion.{bash,zsh}) for the details.
 _fzf_compgen_path() {
-    echo "_fzf_compgen_path"
     fd --hidden --follow --exclude ".git" . "$1"
 }
 
 # Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
-    echo "_fzf_compgen_dir"
     fd --type d --hidden --follow --exclude ".git" . "$1"
 }
+
+# Fuzzy cd from home
+alias hcd="cd ~ && cd \$(fd --hidden --type directory --exclude '.git' . | fzf)"
+# Fuzzy cd from root
+alias hcd="cd / && cd \$(fd --hidden --type directory --exclude '.git' . | fzf)"
