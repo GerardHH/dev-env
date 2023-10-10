@@ -1,6 +1,11 @@
 TODO:
 - Research configurable (i.e. autocomplete or popup) commands
 - Auto setup nerdfont
+
 - Alacrity shell emulator
+- Use lf or vifm instead of ranger
+- Use command line bitwarden
+- dragon: for enabling drag and drop https://github.com/mwh/dragon
+- zoxide: replacement for cd?
 - zsh:
 -- diff-so-fancy better git diffs
