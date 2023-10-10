@@ -1,4 +1,4 @@
-TODO:
+whish-list:
 - Research configurable (i.e. autocomplete or popup) commands
 -- How to cache these
 - Auto setup nerdfont
@@ -9,6 +9,18 @@ TODO:
 - dragon: for enabling drag and drop https://github.com/mwh/dragon
 - command palate / which-key like
 - zoxide: replacement for cd?
+
+- setup.bash:
+-- stow_list:
+--- Check if original package contains `.config` folder:
+---- yes: path = `~/.CONFIG/`
+---- no: path = `~/`
+--- check if link exists:
+---- yes: skip package
+---- no: check if the link can be made:
+----- yes: make link
+----- no: remove original content, then make link
+
 - zsh:
 -- diff-so-fancy better git diffs
 -- fzf:
@@ -16,3 +28,10 @@ TODO:
 --- own fzf tab complete
 --- own fzf history search
 --- fzf previews
+
+Extra-installs:
+- Alacrity:
+-- `sudo apt-get install -y \
+  ibus ibus-data ibus-gtk ibus-gtk3 \
+  libegl1-mesa libgl1-mesa-glx \
+  libxcb-xtest0 python3-ibus-1.0`
