@@ -26,6 +26,8 @@ plug "$HOME/.config/zsh/plugins/eza.zsh"
 plug "$HOME/.config/zsh/plugins/fzf-tab-completion.zsh"
 plug "$HOME/.config/zsh/plugins/fzf.zsh"
 
+plug "$HOME/.config/zsh/proprietary/tasks.zsh"
+
 
 # Load and initialise completion system
 autoload -Uz compinit
