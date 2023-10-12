@@ -1,11 +1,18 @@
 TODO:
 - Research configurable (i.e. autocomplete or popup) commands
+-- How to cache these
 - Auto setup nerdfont
 
 - Alacrity shell emulator
-- Use lf or vifm instead of ranger
+- Use lf or vifm or nnn instead of ranger
 - Use command line bitwarden
 - dragon: for enabling drag and drop https://github.com/mwh/dragon
+- command palate / which-key like
 - zoxide: replacement for cd?
 - zsh:
 -- diff-so-fancy better git diffs
+-- fzf:
+--- fzf kill
+--- own fzf tab complete
+--- own fzf history search
+--- fzf previews
