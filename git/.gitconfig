@@ -9,11 +9,10 @@
     commit-message = commit --message
     commit-message-all = commit --all --message
     current-branch-name = rev-parse --abbrev-ref HEAD
-    list-tree = !git log $(git current-branch-name) --oneline --graph --decorate --remotes=*/$(git current-branch-name)
+    list-tree = !git log $(git current-branch-name) --color=always --oneline --graph --decorate --remotes=*/$(git current-branch-name)
     push-current = !git push $(git remote) $(git current-branch-name)
     push-current-force = !git push-current --force
     rebase-autosquash = rebase --interactive --autosquash
-    rebase-environment-onto-current = !git rebase --onto $(git cb) GH/vscode-environment^ GH/vscode-environment
     rebase-interactive = rebase --interactive
     reset-remote = !git reset --hard $(git remote)/$(git current-branch-name)
     remote-branch = !git ls-remote $(git remote) $(git branch)
@@ -28,8 +27,6 @@
 [merge]
         tool = kdiff3NoAuto
         conflictstyle = diff3
-[mergetool "kdiff3NoAuto"]
-        cmd = /usr/bin/kdiff3 --L1 \"$MERGED (Base)\" --L2 \"$MERGED (Local)\" --L3 \"$MERGED (Remote)\" -o \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
 [user]
 	name = Gerard Heshusius
 	email = gHeshusius@lely.com
