@@ -26,12 +26,12 @@ plug "$HOME/.config/zsh/plugins/eza.zsh"
 plug "$HOME/.config/zsh/plugins/fzf-tab-completion.zsh"
 plug "$HOME/.config/zsh/plugins/fzf.zsh"
 
-plug "$HOME/.config/zsh/proprietary/tasks.zsh"
-
-
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
+
+# Make sure completions system is initialized before sourcing this
+plug "$HOME/.config/zsh/proprietary/tasks.zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
