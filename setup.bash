@@ -28,7 +28,6 @@ nix-env --install --attr \
     nixpkgs.lua \
     nixpkgs.neovim \
     nixpkgs.nodejs_20 \
-    nixpkgs.ranger \
     nixpkgs.ripgrep \
     nixpkgs.stow \
     nixpkgs.tmux \
@@ -45,7 +44,6 @@ stow_list \
     git \
     lazygit \
     nvim \
-    ranger \
     ripgrep \
     tmux \
     zsh
