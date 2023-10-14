@@ -10,17 +10,6 @@ whish-list:
 - command palate / which-key like
 - zoxide: replacement for cd?
 
-- setup.bash:
--- stow_list:
---- Check if original package contains `.config` folder:
----- yes: path = `~/.CONFIG/`
----- no: path = `~/`
---- check if link exists:
----- yes: skip package
----- no: check if the link can be made:
------ yes: make link
------ no: remove original content, then make link
-
 - zsh:
 -- diff-so-fancy better git diffs
 -- fzf:
