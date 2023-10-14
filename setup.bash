@@ -41,6 +41,7 @@ fi
 
 echo "Stow configurations"
 stow_list \
+    alacritty \
     git \
     lazygit \
     nvim \

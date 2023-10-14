@@ -1,7 +1,9 @@
+Note:
+- Alacrity doesn't work through NIX. Install through normal means.
+
 whish-list:
 - Auto setup nerdfont
 
-- Alacrity shell emulator
 - Use lf or vifm or nnn instead of ranger
 - Use command line bitwarden
 - dragon: for enabling drag and drop https://github.com/mwh/dragon
@@ -27,9 +29,3 @@ whish-list:
 --- own fzf history search
 --- fzf previews
 
-Extra-installs:
-- Alacrity:
--- `sudo apt-get install -y \
-  ibus ibus-data ibus-gtk ibus-gtk3 \
-  libegl1-mesa libgl1-mesa-glx \
-  libxcb-xtest0 python3-ibus-1.0`
