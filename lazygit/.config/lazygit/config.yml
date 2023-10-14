@@ -1,4 +1,7 @@
 git:
-  branchLogCmd: 'git list-tree'
   allBranchesLogCmd: 'git list-tree --all'
+  branchLogCmd: 'git list-tree'
+  paging:
+    colorArg: always
+    pager: diff-so-fancy
 

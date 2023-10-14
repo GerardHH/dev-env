@@ -10,6 +10,7 @@
     commit-message-all = commit --all --message
     current-branch-name = rev-parse --abbrev-ref HEAD
     list-tree = !git log $(git current-branch-name) --color=always --oneline --graph --decorate --remotes=*/$(git current-branch-name)
+    patch = !git --no-pager diff --no-color
     push-current = !git push $(git remote) $(git current-branch-name)
     push-current-force = !git push-current --force
     rebase-autosquash = rebase --interactive --autosquash
@@ -18,15 +19,32 @@
     remote-branch = !git ls-remote $(git remote) $(git branch)
     unstage-all = reset HEAD --
 [color]
-    ui = true
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
 [core]
     autocrlf = input
     editor = vi
 [diff]
     wsErrorHighlight = all
+[interactive]
+	diffFilter = diff-so-fancy --patch
 [merge]
-        tool = kdiff3NoAuto
-        conflictstyle = diff3
+    tool = kdiff3NoAuto
+    conflictstyle = diff3
+[pager]
+    diff = diff-so-fancy | less --tabs=4 -RFXS --pattern '^(Date|added|deleted|modified): '
 [user]
 	name = Gerard Heshusius
 	email = gHeshusius@lely.com
