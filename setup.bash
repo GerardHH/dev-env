@@ -22,6 +22,7 @@ nix-env --install --attr \
     nixpkgs.bat \
     nixpkgs.cargo \
     nixpkgs.diff-so-fancy \
+    nixpkgs.dig \
     nixpkgs.eza \
     nixpkgs.fd \
     nixpkgs.fzf \

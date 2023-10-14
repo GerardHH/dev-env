@@ -14,7 +14,6 @@ fi
 if [ -e /home/gerard/.nix-profile/etc/profile.d/nix.sh ]; then . /home/gerard/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 # Plugins
-plug "joshskidmore/zsh-fzf-history-search"
 plug "romkatv/powerlevel10k"
 plug "zsh-users/zsh-syntax-highlighting"
 
@@ -23,15 +22,17 @@ plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/exports.zsh"
 
 plug "$HOME/.config/zsh/plugins/eza.zsh"
-plug "$HOME/.config/zsh/plugins/fzf-tab-completion.zsh"
-plug "$HOME/.config/zsh/plugins/fzf.zsh"
 
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
 
-# Make sure completions system is initialized before sourcing this
+# Plugins that need enabling after the initialization of the completion system
+plug "$HOME/.config/zsh/plugins/fzf.zsh"
 plug "$HOME/.config/zsh/proprietary/tasks.zsh"
+
+# Third party completions
+export FPATH=$HOME/.nix-profile/share/zsh/site-functions:$FPATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
