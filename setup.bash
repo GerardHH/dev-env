@@ -79,3 +79,6 @@ if ! grep --quiet '.nix-profile/bin/zsh' "$SHELLS"; then
     echo "Enable zap package manager for zsh"
     command -v zsh | zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1 --keep
 fi
+
+source $HOME/dev-env/setup/keychron.sh
+fix_keychron_k2
