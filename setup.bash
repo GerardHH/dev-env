@@ -25,6 +25,7 @@ nix-env --install --attr \
     nixpkgs.eza \
     nixpkgs.fd \
     nixpkgs.fzf \
+    nixpkgs.git \
     nixpkgs.glibcLocales \
     nixpkgs.lazygit \
     nixpkgs.lua \
