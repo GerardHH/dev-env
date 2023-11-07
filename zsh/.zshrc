@@ -39,5 +39,5 @@ plug "$HOME/.config/zsh/proprietary/tasks.zsh"
 # Connect to tmux session or start a new one
 if [ -z "$TMUX" ]
 then
-    tmux attach -t TMUX || tmux new -s TMUX
+    tmux
 fi

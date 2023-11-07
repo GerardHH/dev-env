@@ -11,7 +11,6 @@ whish-list:
 - zoxide: replacement for cd?
 
 - zsh:
--- Don't go into same tmux sesion when opening terminal
 -- fzf:
 --- fzf kill
 --- own fzf tab complete
