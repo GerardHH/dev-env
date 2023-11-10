@@ -34,6 +34,7 @@ nix-env --install --attr \
     nixpkgs.ripgrep \
     nixpkgs.stow \
     nixpkgs.xclip \
+    nixpkgs.zellij \
     nixpkgs.zsh
 
 if git submodule status | grep --quiet '^-'; then
@@ -48,6 +49,7 @@ stow_list \
     lazygit \
     nvim \
     ripgrep \
+    zellij \
     zsh
 
 SHELLS=/etc/shells
