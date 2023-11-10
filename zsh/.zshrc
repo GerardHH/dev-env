@@ -35,9 +35,3 @@ plug "$HOME/.config/zsh/proprietary/tasks.zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Connect to tmux session or start a new one
-if [ -z "$TMUX" ]
-then
-    tmux
-fi

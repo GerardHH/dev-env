@@ -33,7 +33,6 @@ nix-env --install --attr \
     nixpkgs.nodejs_20 \
     nixpkgs.ripgrep \
     nixpkgs.stow \
-    nixpkgs.tmux \
     nixpkgs.xclip \
     nixpkgs.zsh
 
@@ -49,25 +48,7 @@ stow_list \
     lazygit \
     nvim \
     ripgrep \
-    tmux \
     zsh
-
-TPM_DIR=$HOME/.config/tmux/plugins/tpm
-if [ ! -d "$TPM_DIR" ]; then
-    echo "Install tmux package manager"
-    mkdir -p $TPM_DIR
-    git clone https://github.com/tmux-plugins/tpm $TPM_DIR
-
-    echo "Setup tmux"
-    # start a server but don't attach to it
-    tmux start-server
-    # create a new session but don't attach to it either
-    tmux new-session -d
-    # install the plugins
-    $TPM_DIR/scripts/install_plugins.sh
-    # killing the server is not required, I guess
-    tmux kill-server
-fi
 
 SHELLS=/etc/shells
 if ! grep --quiet '.nix-profile/bin/zsh' "$SHELLS"; then
