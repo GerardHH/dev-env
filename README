@@ -16,7 +16,3 @@ whish-list:
 --- own fzf tab complete
 --- own fzf history search
 --- fzf previews
-
-- nvim:
--- Remove pop-up terminal (use tmux instead)
--- Remove telescope-tasks (use zsh functions instead)
