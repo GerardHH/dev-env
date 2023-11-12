@@ -4,6 +4,7 @@ Note:
 whish-list:
 - Auto setup nerdfont
 
+- Use regolith like desctop environment?
 - Use lf or vifm or nnn instead of ranger
 - Use command line bitwarden
 - dragon: for enabling drag and drop https://github.com/mwh/dragon
@@ -11,8 +12,12 @@ whish-list:
 - zoxide: replacement for cd?
 
 - zsh:
+-- Use starship prompt?
 -- fzf:
 --- fzf kill
 --- own fzf tab complete
 --- own fzf history search
 --- fzf previews
+
+- nvim:
+-- vim-mark for multiple words highlight
