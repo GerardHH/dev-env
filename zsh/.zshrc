@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -o vi
+
 # Start zellij before p10k
 eval "$(zellij setup --generate-auto-start zsh)"
 
@@ -17,7 +19,6 @@ fi
 if [ -e /home/gerard/.nix-profile/etc/profile.d/nix.sh ]; then . /home/gerard/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 # Plugins
-plug "jeffreytse/zsh-vi-mode"
 plug "joshskidmore/zsh-fzf-history-search"
 plug "romkatv/powerlevel10k"
 plug "zsh-users/zsh-syntax-highlighting"
