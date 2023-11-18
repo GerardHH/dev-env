@@ -32,6 +32,7 @@ nix-env --install --attr \
     nixpkgs.neovim \
     nixpkgs.nodejs_20 \
     nixpkgs.ripgrep \
+    nixpkgs.starship \
     nixpkgs.stow \
     nixpkgs.xclip \
     nixpkgs.zellij \
@@ -49,6 +50,7 @@ stow_list \
     lazygit \
     nvim \
     ripgrep \
+    starship \
     zellij \
     zsh
 
