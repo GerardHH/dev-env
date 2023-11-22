@@ -24,6 +24,8 @@ plug "$HOME/.config/zsh/plugins/fzf.zsh"
 autoload -Uz compinit
 compinit
 
+plug "$HOME/.config/zsh/proprietary/tasks.zsh"
+
 eval "$(starship init zsh)"
 
 eval "$(zellij setup --generate-auto-start zsh)"
