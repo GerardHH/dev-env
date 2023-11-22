@@ -4,6 +4,7 @@ Note:
 whish-list:
 - Auto setup nerdfont
 
+- Have a bin with usefull scripts. Can has setup scripts as well?
 - Use regolith like desctop environment?
 - Use lf or vifm or nnn instead of ranger
 - Use command line bitwarden
@@ -12,11 +13,20 @@ whish-list:
 - zoxide: replacement for cd?
 
 - zsh:
+-- Remove python module info and such (starship)
 -- fzf:
+--- loop around the selection window (up on top goes to bottom)
 --- fzf kill
 --- own fzf tab complete
 --- own fzf history search
 --- fzf previews
 
 - nvim:
+-- Using "session-recover" breaks LSP
+-- Don't auto complete brackets and such
 -- vim-mark for multiple words highlight
+
+- Notetaking:
+-- zk and zk-nvim
+-- neorg and mind
+-- obsidian with git plugin
