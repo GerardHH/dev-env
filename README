@@ -13,7 +13,6 @@ whish-list:
 - zoxide: replacement for cd?
 
 - zsh:
--- Remove python module info and such (starship)
 -- fzf:
 --- loop around the selection window (up on top goes to bottom)
 --- fzf kill
@@ -28,5 +27,5 @@ whish-list:
 
 - Notetaking:
 -- zk and zk-nvim
--- neorg and mind
+-- neorg
 -- obsidian with git plugin
