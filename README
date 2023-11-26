@@ -21,8 +21,6 @@ whish-list:
 --- fzf previews
 
 - nvim:
--- Using "session-recover" breaks LSP
--- Don't auto complete brackets and such
 -- vim-mark for multiple words highlight
 
 - Notetaking:
