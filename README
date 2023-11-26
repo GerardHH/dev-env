@@ -12,9 +12,6 @@ whish-list:
 - command palate / which-key like
 - zoxide: replacement for cd?
 
-- nvim:
--- vim-mark for multiple words highlight
-
 - Notetaking:
 -- zk and zk-nvim
 -- neorg
