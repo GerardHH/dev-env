@@ -12,14 +12,6 @@ whish-list:
 - command palate / which-key like
 - zoxide: replacement for cd?
 
-- zsh:
--- fzf:
---- loop around the selection window (up on top goes to bottom)
---- fzf kill
---- own fzf tab complete
---- own fzf history search
---- fzf previews
-
 - nvim:
 -- vim-mark for multiple words highlight
 

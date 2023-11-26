@@ -9,7 +9,6 @@ set -o vi
 if [ -e /home/gerard/.nix-profile/etc/profile.d/nix.sh ]; then . /home/gerard/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 # Plugins
-plug "joshskidmore/zsh-fzf-history-search"
 plug "zsh-users/zsh-syntax-highlighting"
 
 # Source
@@ -17,7 +16,6 @@ plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/exports.zsh"
 
 plug "$HOME/.config/zsh/plugins/eza.zsh"
-plug "$HOME/.config/zsh/plugins/fzf-tab-completion.zsh"
 plug "$HOME/.config/zsh/plugins/fzf.zsh"
 
 # Load and initialise completion system
