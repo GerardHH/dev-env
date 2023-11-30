@@ -1,5 +1,6 @@
 Note:
 - Alacrity doesn't work through NIX. Install through normal means.
+- Install copy-past utilities on host system (xclip for x11).
 
 whish-list:
 - Auto setup nerdfont
