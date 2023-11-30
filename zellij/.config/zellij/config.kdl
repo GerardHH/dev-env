@@ -22,6 +22,9 @@ keybinds {
     shared_except "session" "locked" {
         bind "Alt o" { SwitchToMode "Session"; }
     }
+    shared_except "locked" {
+        bind "Alt q" { Quit; }
+    }
 }
 
 plugins {
