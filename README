@@ -1,18 +1,26 @@
 Note:
 - Alacrity doesn't work through NIX. Install through normal means.
 - Install copy-past utilities on host system (xclip for x11).
+- Install obsidian on host machine
 
 whish-list:
 - Auto setup nerdfont
+-- https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Hack.zip
+- Think about fedora
+-- nerdfont
+-- set default shell
+--- instal util-linux
+--- `chsh -s {path-to-zsh}` (should work for every distro)
 
-- Have a bin with usefull scripts. Can has setup scripts as well?
 - Use regolith like desctop environment?
-- Use lf or vifm or nnn instead of ranger
-- Use command line bitwarden
-- dragon: for enabling drag and drop https://github.com/mwh/dragon
-- zoxide: replacement for cd?
+
+- nvim:
+-- telescope pop-up bigger
+-- additional jump to highlight (one for jump to any and one for jump to same)
+-- LSP suggestions are too high on the autocomplete list
 
 - Notetaking:
+-- image.nvim needs kitty terminal
 -- zk and zk-nvim
 -- neorg
 -- obsidian with git plugin
