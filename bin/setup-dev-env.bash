@@ -21,6 +21,7 @@ echo "Install packages"
 nix-env --install --attr \
     nixpkgs.bat \
     nixpkgs.cargo \
+    nixpkgs.curl \
     nixpkgs.diff-so-fancy \
     nixpkgs.eza \
     nixpkgs.fd \
@@ -68,3 +69,6 @@ fi
 
 source setup-keychron.bash
 fix_keychron_k2
+
+source setup-fonts.bash
+install_hack
