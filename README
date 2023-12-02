@@ -6,11 +6,6 @@ Note:
 whish-list:
 - Auto setup nerdfont
 -- https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Hack.zip
-- Think about fedora
--- nerdfont
--- set default shell
---- instal util-linux
---- `chsh -s {path-to-zsh}` (should work for every distro)
 
 - Use regolith like desctop environment?
 
