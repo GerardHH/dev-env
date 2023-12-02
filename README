@@ -6,9 +6,6 @@ Note:
 whish-list:
 - Use regolith like desctop environment?
 
-- nvim:
--- LSP suggestions are too high on the autocomplete list
-
 - Notetaking:
 -- image.nvim needs kitty terminal
 -- zk and zk-nvim
