@@ -6,6 +6,17 @@ Note:
 whish-list:
 - Use regolith like desctop environment?
 
+nvim:
+- fix collouring for qml files
+- jumping around buffers:
+-- harpoon
+- showing context on top of screen:
+-- nvim-treesitter-context
+-- context.vim
+- jumping around in buffers:
+-- leap
+-- nvim-treesitter-textobjects
+
 - Notetaking:
 -- image.nvim needs kitty terminal
 -- zk and zk-nvim
