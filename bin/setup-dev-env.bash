@@ -48,6 +48,7 @@ echo "Stow configurations"
 stow_list \
     alacritty \
     git \
+    kitty \
     lazygit \
     nvim \
     ripgrep \

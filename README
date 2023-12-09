@@ -1,5 +1,5 @@
 Note:
-- Alacrity doesn't work through NIX. Install through normal means.
+- Alacrity/kitty doesn't work through NIX. Install through normal means.
 - Install copy-past utilities on host system (xclip for x11).
 - Install obsidian on host machine
 
