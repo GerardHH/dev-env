@@ -26,4 +26,6 @@ plug "$HOME/.config/zsh/proprietary/tasks.zsh"
 
 eval "$(starship init zsh)"
 
+# When zellij exits, the shell exits as well
+export ZELLIJ_AUTO_EXIT=true
 eval "$(zellij setup --generate-auto-start zsh)"
