@@ -43,6 +43,10 @@
 [merge]
     tool = kdiff3NoAuto
     conflictstyle = diff3
+[origin]
+    prune = true # auto prune on every fetch & pull
+[pull]
+    rebase = true # use rebase strategy for git pull
 [pager]
     diff = diff-so-fancy | less --tabs=4 -RFXS --pattern '^(Date|added|deleted|modified): '
 [user]
