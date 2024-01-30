@@ -1,7 +1,6 @@
 [alias]
     add-whitespace-changes = !git add -A && git diff --cached --ignore-all-space | git apply --cached --reverse
     add-without-whitespace-changes = !git diff --ignore-all-space --no-color "$@" | git apply --cached --ignore-whitespace
-    cherry-pick-environment = cherry-pick GH/vscode-environment
     commit-amend-no-edit = commit --amend --no-edit
     commit-amend-no-edit-all = !git commit-amend-no-edit --all
     commit-fixup = commit --fixup
@@ -21,6 +20,7 @@
     rebase-interactive = rebase --interactive
     remote-branch = !git ls-remote $(git remote) $(git branch)
     reset-remote = !git reset --hard $(git remote)/$(git current-branch-name)
+    submodule-update-recursive-init = submodule update --recursive --init
     unstage-all = reset HEAD --
 [color]
 	ui = true
