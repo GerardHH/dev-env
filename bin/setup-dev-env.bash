@@ -4,7 +4,7 @@ function stow_list()
 {
     for package in "$@"
     do
-        echo "stow $package"
+        echo "stow --adopt $package"
         stow "$package"
     done
 }
