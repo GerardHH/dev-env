@@ -1,12 +1,5 @@
-Note:
 - Alacrity/kitty doesn't work through NIX. Install through normal means.
+-- Or use `nixGL alacritty`
 - Install copy-past utilities on host system (xclip for x11).
 - Install libstdc++{version}-dev on host machine, where version must be the same as the used clang compiler.
-
-whish-list:
-- Use regolith like desctop environment?
-
-- Notetaking:
--- image.nvim needs kitty terminal
--- zk and zk-nvim
--- neorg
+-- Or latest version supported by the repo and pray.
