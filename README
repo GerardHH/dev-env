@@ -1,3 +1,4 @@
+- Install awesome on system.
 - Alacrity/kitty doesn't work through NIX. Install through normal means.
 -- Or use `nixGL alacritty`, can't figure out on how to call it through awesome though.
 - Install libstdc++{version}-dev on host machine, where version must be the same as the used clang compiler.
