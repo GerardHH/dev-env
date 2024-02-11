@@ -14,7 +14,6 @@ nix-env -iA nixgl.auto.nixGLDefault
 
 echo "Install packages"
 nix-env --install --attr \
-    nixpkgs.alacritty \
     nixpkgs.bat \
     nixpkgs.cargo \
     nixpkgs.curl \
