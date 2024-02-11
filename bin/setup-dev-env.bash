@@ -28,6 +28,8 @@ nix-env --install --attr \
     nixpkgs.lua \
     nixpkgs.neovim \
     nixpkgs.nodejs_20 \
+    nixpkgs.python3 \
+    nixpkgs.python311Packages.pip \
     nixpkgs.ripgrep \
     nixpkgs.starship \
     nixpkgs.stow \
