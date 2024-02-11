@@ -1,14 +1,5 @@
 #!/bin/bash
 
-function stow_list()
-{
-    for package in "$@"
-    do
-        echo "stow --adopt $package"
-        stow "$package"
-    done
-}
-
 if [ ! -L "$HOME/.nix-profile" ]; then
     echo "Install nix"
     curl -L https://nixos.org/nix/install | sh
@@ -50,16 +41,9 @@ if git submodule status | grep --quiet '^-'; then
 fi
 
 echo "Stow configurations"
-stow_list \
-    alacritty \
-    git \
-    kitty \
-    lazygit \
-    nvim \
-    ripgrep \
-    starship \
-    zellij \
-    zsh
+pushd $HOME/dev-env/ > /dev/null
+stow --adopt .
+popd > /dev/null
 
 SHELLS=/etc/shells
 if ! grep --quiet '.nix-profile/bin/zsh' "$SHELLS"; then
