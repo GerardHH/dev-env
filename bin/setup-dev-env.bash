@@ -34,6 +34,7 @@ nix-env --install --attr \
     nixpkgs.starship \
     nixpkgs.stow \
     nixpkgs.util-linux \
+    nixpkgs.xclip \
     nixpkgs.zellij \
     nixpkgs.zsh
 
