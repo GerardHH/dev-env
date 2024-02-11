@@ -73,8 +73,8 @@ if ! grep --quiet '.nix-profile/bin/zsh' "$SHELLS"; then
     command -v zsh | zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1 --keep
 fi
 
-source setup-keychron.bash
+source $HOME/dev-env/bin/setup-keychron.bash
 fix_keychron_k2
 
-source setup-fonts.bash
+source $HOME/dev-env/bin/setup-fonts.bash
 install_hack
