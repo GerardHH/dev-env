@@ -30,6 +30,7 @@ nix-env --install --attr \
     nixpkgs.stow \
     nixpkgs.util-linux \
     nixpkgs.zellij \
+    nixpkgs.zoxide \
     nixpkgs.zsh
 
 if git submodule status | grep --quiet '^-'; then
