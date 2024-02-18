@@ -3,3 +3,4 @@
 -- Or use `nixGL alacritty`, can't figure out on how to call it through awesome though.
 - Install libstdc++{version}-dev on host machine, where version must be the same as the used clang compiler.
 -- Or latest version supported by the repo and pray.
+- Install xclip (or other clipboard manager) from system. Some can't find libbsd if installed through nix.

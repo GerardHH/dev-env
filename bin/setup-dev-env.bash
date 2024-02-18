@@ -8,10 +8,6 @@ fi
 echo "Source nix"
 . ~/.nix-profile/etc/profile.d/nix.sh
 
-echo "Enable and install nixGL"
-nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl && nix-channel --update
-nix-env -iA nixgl.auto.nixGLDefault
-
 echo "Install packages"
 nix-env --install --attr \
     nixpkgs.bat \
@@ -33,8 +29,8 @@ nix-env --install --attr \
     nixpkgs.starship \
     nixpkgs.stow \
     nixpkgs.util-linux \
-    nixpkgs.xclip \
     nixpkgs.zellij \
+    nixpkgs.zoxide \
     nixpkgs.zsh
 
 if git submodule status | grep --quiet '^-'; then
