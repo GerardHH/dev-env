@@ -4,6 +4,3 @@
 [submodule "proprietary"]
     path = proprietary
     url = git@github.com:GerardHH/proprietary.git
-[submodule ".config/awesome/themes/catppuccin-awesomemwm"]
-	path = .config/awesome/themes/catppuccin-awesomemwm
-	url = https://github.com/LeBaronDeCharlus/catppuccin-awesomemwm
