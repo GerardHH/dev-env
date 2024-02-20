@@ -35,6 +35,30 @@ nix-env --install --attr \
     nixpkgs.zoxide \
     nixpkgs.zsh
 
+echo "Install language servers"
+nix-env --install --attr \
+    nixpkgs.clang-tools \
+    nixpkgs.lua-language-server \
+    nixpkgs.marksman \
+    nixpkgs.nodePackages.bash-language-server \
+    nixpkgs.nodePackages.pyright
+
+echo "Install static analyzers"
+nix-env --install --attr \
+    nixpkgs.mypy
+
+echo "Install linters"
+nix-env --install --attr \
+    nixpkgs.ruff
+
+echo "Install formatters"
+nix-env --install --attr \
+    nixpkgs.beautysh \
+    nixpkgs.black \
+    nixpkgs.stylua
+
+# echo "Install debbuggers"
+
 if git submodule status | grep --quiet '^-'; then
     echo "Initialize git submodules"
     git submodule update --recursive --init
