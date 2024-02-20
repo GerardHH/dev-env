@@ -2,62 +2,19 @@
 
 pushd $HOME/dev-env
 
-if [ ! -L "$HOME/.nix-profile" ]; then
-    echo "Install nix"
-    curl -L https://nixos.org/nix/install | sh
-fi
+echo "Install nix"
+curl -L https://nixos.org/nix/install | sh
 
 echo "Source nix"
 . ~/.nix-profile/etc/profile.d/nix.sh
 
-echo "Install packages"
-nix-env --install --attr \
-    nixpkgs.bat \
-    nixpkgs.cargo \
-    nixpkgs.curl \
-    nixpkgs.diff-so-fancy \
-    nixpkgs.eza \
-    nixpkgs.fd \
-    nixpkgs.fzf \
-    nixpkgs.git \
-    nixpkgs.glibcLocales \
-    nixpkgs.lazygit \
-    nixpkgs.lua \
-    nixpkgs.neovim \
-    nixpkgs.nodejs_20 \
-    nixpkgs.python3 \
-    nixpkgs.python311Packages.pip \
-    nixpkgs.ripgrep \
-    nixpkgs.starship \
-    nixpkgs.stow \
-    nixpkgs.util-linux \
-    nixpkgs.zellij \
-    nixpkgs.zoxide \
-    nixpkgs.zsh
+echo "Install home-manager"
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+nix-channel --update
+nix-shell '<home-manager>' -A install
 
-echo "Install language servers"
-nix-env --install --attr \
-    nixpkgs.clang-tools \
-    nixpkgs.lua-language-server \
-    nixpkgs.marksman \
-    nixpkgs.nodePackages.bash-language-server \
-    nixpkgs.nodePackages.pyright
-
-echo "Install static analyzers"
-nix-env --install --attr \
-    nixpkgs.mypy
-
-echo "Install linters"
-nix-env --install --attr \
-    nixpkgs.ruff
-
-echo "Install formatters"
-nix-env --install --attr \
-    nixpkgs.beautysh \
-    nixpkgs.black \
-    nixpkgs.stylua
-
-# echo "Install debbuggers"
+echo "Home manager magic"
+home-manager switch
 
 if git submodule status | grep --quiet '^-'; then
     echo "Initialize git submodules"
