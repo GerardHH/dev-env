@@ -1,5 +1,7 @@
 #!/bin/bash
 
+pushd $HOME/dev-env
+
 if [ ! -L "$HOME/.nix-profile" ]; then
     echo "Install nix"
     curl -L https://nixos.org/nix/install | sh
@@ -39,9 +41,7 @@ if git submodule status | grep --quiet '^-'; then
 fi
 
 echo "Stow configurations"
-pushd $HOME/dev-env/ > /dev/null
 stow --adopt .
-popd > /dev/null
 
 SHELLS=/etc/shells
 if ! grep --quiet '.nix-profile/bin/zsh' "$SHELLS"; then
@@ -60,3 +60,5 @@ fix_keychron_k2
 
 source $HOME/dev-env/bin/setup-fonts.bash
 install_hack
+
+popd
