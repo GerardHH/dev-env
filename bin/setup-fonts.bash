@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 function install_hack() {
-    if [ -f $HOME/.local/share/fonts/HackNerdFont-Regular.ttf ]; then
+    if [ -f "$HOME/.local/share/fonts/HackNerdFont-Regular.ttf" ]; then
         echo "Detected hack nerd font, skipping"
         return 0
     fi
@@ -9,9 +9,7 @@ function install_hack() {
     local target=https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Hack.zip
     local output=$HOME/Downloads/Hack.zip
     echo "Downloading $target to $output"
-    curl -L "$target" --output "$output"
-
-    if [ ! $? -eq 0 ]; then
+    if curl -L "$target" --output "$output"; then
         echo "Downloading fonts failed, stopping"
         return 1
     fi
