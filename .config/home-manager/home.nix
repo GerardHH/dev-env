@@ -78,6 +78,7 @@
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
 
+    "~/.config/zellij".source = "~/dev-env/.config/zellij/";
   };
 
   # Let Home Manager install and manage itself.
