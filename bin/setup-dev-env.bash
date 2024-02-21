@@ -14,15 +14,12 @@ nix-channel --update
 nix-shell '<home-manager>' -A install
 
 echo "Home manager magic"
-home-manager switch
+home-manager -f $HOME/dev-env/.config/home-manager/home.nix switch
 
 if git submodule status | grep --quiet '^-'; then
     echo "Initialize git submodules"
     git submodule update --recursive --init
 fi
-
-echo "Stow configurations"
-stow --adopt .
 
 SHELLS=/etc/shells
 if ! grep --quiet '.nix-profile/bin/zsh' "$SHELLS"; then

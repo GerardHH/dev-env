@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 
+let
+    HOME = builtins.getEnv("HOME");
+    symlink = config.lib.file.mkOutOfStoreSymlink;
+in
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -35,7 +39,6 @@
     pkgs.python311Packages.pip
     pkgs.ripgrep
     pkgs.starship
-    pkgs.stow
     pkgs.util-linux
     pkgs.zellij
     pkgs.zoxide
@@ -73,12 +76,21 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
+    ".gitconfig".source = symlink "${HOME}/dev-env/.gitconfig";
+    ".ripgreprc".source = symlink "${HOME}/dev-env/.ripgreprc";
+    ".zshrc".source = symlink "${HOME}/dev-env/.zshrc";
 
-    "~/.config/zellij".source = "~/dev-env/.config/zellij/";
+    ".config/alacritty".source = symlink "${HOME}/dev-env/.config/alacritty";
+    ".config/awesome".source = symlink "${HOME}/dev-env/.config/awesome";
+    ".config/home-manager".source = symlink "${HOME}/dev-env/.config/home-manager";
+    ".config/kitty".source = symlink "${HOME}/dev-env/.config/kitty";
+    ".config/lazygit".source = symlink "${HOME}/dev-env/.config/lazygit";
+    ".config/nvim".source = symlink "${HOME}/dev-env/.config/nvim";
+    ".config/starship.toml".source = symlink "${HOME}/dev-env/.config/starship.toml";
+    ".config/zellij".source = symlink "${HOME}/dev-env/.config/zellij/";
+    ".config/zsh".source = symlink "${HOME}/dev-env/.config/zsh";
+
+    "bin".source = symlink "${HOME}/dev-env/bin";
   };
 
   # Let Home Manager install and manage itself.
