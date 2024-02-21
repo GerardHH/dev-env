@@ -76,20 +76,18 @@ in
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".gitconfig".source = symlink "${HOME}/dev-env/.gitconfig";
-    ".ripgreprc".source = symlink "${HOME}/dev-env/.ripgreprc";
-    ".zshrc".source = symlink "${HOME}/dev-env/.zshrc";
-
-    ".config/alacritty".source = symlink "${HOME}/dev-env/.config/alacritty";
-    ".config/awesome".source = symlink "${HOME}/dev-env/.config/awesome";
-    ".config/home-manager".source = symlink "${HOME}/dev-env/.config/home-manager";
-    ".config/kitty".source = symlink "${HOME}/dev-env/.config/kitty";
-    ".config/lazygit".source = symlink "${HOME}/dev-env/.config/lazygit";
-    ".config/nvim".source = symlink "${HOME}/dev-env/.config/nvim";
-    ".config/starship.toml".source = symlink "${HOME}/dev-env/.config/starship.toml";
-    ".config/zellij".source = symlink "${HOME}/dev-env/.config/zellij/";
-    ".config/zsh".source = symlink "${HOME}/dev-env/.config/zsh";
-
+    ".config/alacritty".source = symlink "${HOME}/dev-env/alacritty";
+    ".config/awesome".source = symlink "${HOME}/dev-env/awesome";
+    ".config/home-manager".source = symlink "${HOME}/dev-env/home-manager";
+    ".config/kitty".source = symlink "${HOME}/dev-env/kitty";
+    ".config/lazygit".source = symlink "${HOME}/dev-env/lazygit";
+    ".config/nvim".source = symlink "${HOME}/dev-env/nvim";
+    ".config/starship.toml".source = symlink "${HOME}/dev-env/starship/starship.toml";
+    ".config/zellij".source = symlink "${HOME}/dev-env/zellij/";
+    ".config/zsh".source = symlink "${HOME}/dev-env/zsh";
+    ".gitconfig".source = symlink "${HOME}/dev-env/git/.gitconfig";
+    ".ripgreprc".source = symlink "${HOME}/dev-env/ripgrep/.ripgreprc";
+    ".zshrc".source = symlink "${HOME}/dev-env/zsh/.zshrc";
     "bin".source = symlink "${HOME}/dev-env/bin";
   };
 
