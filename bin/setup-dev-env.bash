@@ -2,6 +2,11 @@
 
 pushd $HOME/dev-env
 
+if git submodule status | grep --quiet '^-'; then
+    echo "Initialize git submodules"
+    git submodule update --recursive --init
+fi
+
 echo "Install nix"
 curl -L https://nixos.org/nix/install | sh
 
@@ -15,11 +20,6 @@ nix-shell '<home-manager>' -A install
 
 echo "Home manager magic"
 home-manager -f $HOME/dev-env/.config/home-manager/home.nix switch
-
-if git submodule status | grep --quiet '^-'; then
-    echo "Initialize git submodules"
-    git submodule update --recursive --init
-fi
 
 SHELLS=/etc/shells
 if ! grep --quiet '.nix-profile/bin/zsh' "$SHELLS"; then
