@@ -77,8 +77,6 @@ in
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
   ];
 
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
   home.file = {
     ".config/alacritty".source = symlink "${HOME}/dev-env/alacritty";
     ".config/awesome".source = symlink "${HOME}/dev-env/awesome";
@@ -92,6 +90,9 @@ in
     ".gitconfig".source = symlink "${HOME}/dev-env/git/.gitconfig";
     ".ripgreprc".source = symlink "${HOME}/dev-env/ripgrep/.ripgreprc";
     ".zshrc".source = symlink "${HOME}/dev-env/zsh/.zshrc";
+
+    ".local/share/applications/Alacritty.desktop".source = symlink "${HOME}/.nix-profile/share/applications/Alacritty.desktop";
+
     "bin".source = symlink "${HOME}/dev-env/bin";
   };
 
