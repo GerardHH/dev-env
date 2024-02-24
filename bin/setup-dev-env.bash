@@ -23,7 +23,7 @@ nix-channel --update
 nix-shell '<home-manager>' -A install
 
 echo "Home manager magic"
-home-manager -f "$HOME/dev-env/home-manager/home.nix" switch
+home-manager -f "$HOME/dev-env/home-manager/home.nix" -b backup switch
 
 SHELLS=/etc/shells
 if ! grep --quiet '.nix-profile/bin/zsh' "$SHELLS"; then
