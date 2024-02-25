@@ -3,8 +3,8 @@
 pushd "$HOME/dev-env" || exit
 
 if git submodule status | grep --quiet '^-'; then
-    echo "Initialize git submodules"
-    git submodule update --recursive --init
+	echo "Initialize git submodules"
+	git submodule update --recursive --init
 fi
 
 echo "Install nix"
@@ -15,7 +15,7 @@ echo "Source nix"
 
 echo "Install nixGL"
 nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl && nix-channel --update
-nix-env -iA nixgl.auto.nixGLDefault   # or replace `nixGLDefault` with your desired wrapper
+nix-env -iA nixgl.auto.nixGLDefault # or replace `nixGLDefault` with your desired wrapper
 
 echo "Install home-manager"
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
@@ -27,14 +27,14 @@ home-manager -f "$HOME/dev-env/home-manager/home.nix" -b backup switch
 
 SHELLS=/etc/shells
 if ! grep --quiet '.nix-profile/bin/zsh' "$SHELLS"; then
-    echo "Add zsh as a login shell"
-    sudo tee -a $SHELLS
+	echo "Add zsh as a login shell"
+	sudo tee -a $SHELLS
 
-    echo "Use zsh as default shell"
-    sudo chsh -s "$(which zsh)" "$USER"
+	echo "Use zsh as default shell"
+	sudo chsh -s "$(which zsh)" "$USER"
 
-    echo "Enable zap package manager for zsh"
-    zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1 --keep
+	echo "Enable zap package manager for zsh"
+	zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1 --keep
 fi
 
 source "$HOME/dev-env/bin/setup-keychron.bash"

@@ -63,8 +63,8 @@ in
     pkgs.ruff
 
     # Install formatters
-    pkgs.beautysh
     pkgs.black
+    pkgs.shfmt
     pkgs.stylua
 
     # echo "Install debbuggers"
