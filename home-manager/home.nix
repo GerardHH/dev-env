@@ -55,12 +55,12 @@ in
     pkgs.nixd
     pkgs.nodePackages.bash-language-server
     pkgs.nodePackages.pyright
+    pkgs.ruff-lsp
 
     # Install static analyzers
     pkgs.mypy
 
     # Install linters
-    pkgs.ruff
 
     # Install formatters
     pkgs.black
