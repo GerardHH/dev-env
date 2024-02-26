@@ -26,3 +26,6 @@ atch.so.0)
 /opt/ros/humble/lib/plotjuggler/plotjuggler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_ABI_DT_RELR' not found (required by /nix/store/cyrrf49i2hm1w7vn2j945ic3rrzgxbqs-glibc-2.38-44/lib/lib
 pthread.so.0)
 [ros2run]: Process exited with failure 1`
+
+## Whishlist
+- Look into `clangd --path-mapping`
