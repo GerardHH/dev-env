@@ -63,6 +63,7 @@ in
     # Install linters
 
     # Install formatters
+    pkgs.alejandra
     pkgs.black
     pkgs.shfmt
     pkgs.stylua
