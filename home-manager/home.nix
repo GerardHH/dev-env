@@ -53,6 +53,7 @@ in {
 
     # Install language servers
     pkgs.clang-tools # clangd, clang-format, clang-tidy
+    pkgs.cmake-language-server
     pkgs.lua-language-server
     pkgs.marksman
     pkgs.nixd
