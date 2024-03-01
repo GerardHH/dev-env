@@ -85,6 +85,7 @@ in {
   home.file = {
     ".config/alacritty".source = symlink "${HOME}/dev-env/alacritty";
     ".config/awesome".source = symlink "${HOME}/dev-env/awesome";
+    ".config/clangd".source = symlink "${HOME}/dev-env/clangd";
     ".config/home-manager".source = symlink "${HOME}/dev-env/home-manager";
     ".config/kitty".source = symlink "${HOME}/dev-env/kitty";
     ".config/lazygit".source = symlink "${HOME}/dev-env/lazygit";
