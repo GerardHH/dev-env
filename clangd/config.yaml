@@ -1,3 +1,2 @@
 CompileFlags:
   Add: [--include-directory=/usr/include]
-  CompilationDatabase: /home/gerard/salsa_ws/unittest/build/
