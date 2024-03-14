@@ -1,0 +1,6 @@
+% apt update
+
+# apt update, upgrade and autoremove
+sudo apt update && \
+    sudo apt upgrade --yes && \
+    sudo apt autoremove --yes

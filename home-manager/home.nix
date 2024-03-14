@@ -40,6 +40,7 @@ in {
     pkgs.glibcLocales
     pkgs.lazygit
     pkgs.lua
+    pkgs.navi
     pkgs.neovim
     pkgs.nodejs_20
     pkgs.python3
@@ -89,6 +90,7 @@ in {
     ".config/home-manager".source = symlink "${HOME}/dev-env/home-manager";
     ".config/kitty".source = symlink "${HOME}/dev-env/kitty";
     ".config/lazygit".source = symlink "${HOME}/dev-env/lazygit";
+    ".config/navi".source = symlink "${HOME}/dev-env/navi";
     ".config/nvim".source = symlink "${HOME}/dev-env/nvim";
     ".config/starship.toml".source = symlink "${HOME}/dev-env/starship/starship.toml";
     ".config/zellij".source = symlink "${HOME}/dev-env/zellij/";

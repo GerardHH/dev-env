@@ -19,5 +19,5 @@ setopt HIST_FIND_NO_DUPS
 # Set locale support for terminal
 export LOCALE_ARCHIVE="$(nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive"
 
-# Add dev-env/bin to path
-export PATH=$HOME/dev-env/bin:$PATH
+# Set navi cheat paths
+export NAVI_PATH="$HOME/dev-env/proprietary/cheats:$HOME/.config/navi/cheats"
