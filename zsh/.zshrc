@@ -6,6 +6,7 @@ set -o vi
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
 # Source Nix
+if [ -e /home/gerard/.nix-profile/etc/profile.d/hm-session-vars.sh ]; then . /home/gerard/.nix-profile/etc/profile.d/hm-session-vars.sh; fi
 if [ -e /home/gerard/.nix-profile/etc/profile.d/nix.sh ]; then . /home/gerard/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 # Plugins

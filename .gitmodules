@@ -1,5 +1,5 @@
 [submodule "nvim/.config/nvim"]
-	path = .config/nvim
+	path = nvim
 	url = git@github.com:GerardHH/nvim.git
 [submodule "proprietary"]
     path = proprietary
