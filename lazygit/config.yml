@@ -10,8 +10,10 @@ customCommands:
     command: 'git submodule-update-recursive-init'
     description: 'Update all submodules'
 confirmOnQuit: true
+quitOnTopLevelReturn: true
 disableStartupPopups: true
 gui:
+  nerdFontVersion: "2"
   # https://github.com/catppuccin/lazygit/blob/main/themes-mergable/mocha/blue.yml
   theme:
     activeBorderColor:
