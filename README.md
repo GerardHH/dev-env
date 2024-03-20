@@ -32,6 +32,7 @@ To fix the not working Sony WH-1000XM5.
 [ros2run]: Process exited with failure 1
 ```
 Because Alacritty uses nixGL (replaced the binary with a script), all GUI applications spawned from it may have these issues.
+4. pandas can't be found by python3 installed by home-manager.
 
 ## Whishlist
 1. Look into `clangd --path-mapping`
