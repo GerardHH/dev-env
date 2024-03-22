@@ -96,6 +96,7 @@ in {
     ".config/zellij".source = symlink "${HOME}/dev-env/zellij/";
     ".config/zsh".source = symlink "${HOME}/dev-env/zsh";
     ".gitconfig".source = symlink "${HOME}/dev-env/git/.gitconfig";
+    ".gitignore".source = symlink "${HOME}/dev-env/git/.gitignore";
     ".ripgreprc".source = symlink "${HOME}/dev-env/ripgrep/.ripgreprc";
     ".zshrc".source = symlink "${HOME}/dev-env/zsh/.zshrc";
 
