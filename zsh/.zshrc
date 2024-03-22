@@ -24,6 +24,7 @@ autoload -Uz compinit
 compinit
 
 plug "$HOME/.config/zsh/proprietary/tasks.zsh"
+plug "$HOME/.config/zsh/proprietary/alias.zsh"
 
 eval "$(starship init zsh)"
 
