@@ -11,7 +11,7 @@
     conflicts-edit = !$EDITOR $(git conflicts-list)
     conflicts-list = !git ls-files -u | cut -f 2 | sort -u | uniq
     current-branch-name = rev-parse --abbrev-ref HEAD
-    list-tree = !git log $(git current-branch-name) --color=always --oneline --graph --decorate --remotes=*/$(git current-branch-name)
+    list-tree = !git log $(git current-branch-name) --color=always --oneline --graph --decorate --remotes=*/$(git current-branch-name) --
     merge-continue = merge --continue
     patch = !git --no-pager diff --no-color
     push-current = !git push $(git remote) $(git current-branch-name)
@@ -42,13 +42,13 @@
     editor = vi
 [diff]
     wsErrorHighlight = all
+[fetch]
+    prune = true # prune on every fetch
 [interactive]
 	diffFilter = diff-so-fancy --patch
 [merge]
     tool = kdiff3NoAuto
     conflictstyle = diff3
-[origin]
-    prune = true # auto prune on every fetch & pull
 [pull]
     rebase = true # use rebase strategy for git pull
 [pager]
