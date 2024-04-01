@@ -47,8 +47,8 @@ in {
     pkgs.python311Packages.pip
     pkgs.ripgrep
     pkgs.starship
+    pkgs.tmux
     pkgs.util-linux
-    pkgs.zellij
     pkgs.zoxide
     pkgs.zsh
 
@@ -93,7 +93,7 @@ in {
     ".config/navi".source = symlink "${HOME}/dev-env/navi";
     ".config/nvim".source = symlink "${HOME}/dev-env/nvim";
     ".config/starship.toml".source = symlink "${HOME}/dev-env/starship/starship.toml";
-    ".config/zellij".source = symlink "${HOME}/dev-env/zellij/";
+    ".config/tmux".source = symlink "${HOME}/dev-env/tmux";
     ".config/zsh".source = symlink "${HOME}/dev-env/zsh";
     ".gitconfig".source = symlink "${HOME}/dev-env/git/.gitconfig";
     ".gitignore".source = symlink "${HOME}/dev-env/git/.gitignore";

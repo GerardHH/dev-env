@@ -32,6 +32,6 @@ eval "$(zoxide init --cmd cd zsh)"
 
 eval "$(navi widget zsh)"
 
-# When zellij exits, the shell exits as well
-export ZELLIJ_AUTO_EXIT=true
-eval "$(zellij setup --generate-auto-start zsh)"
+# Auto start tmux if stdin is not a TTY and exit terminal on tmux exit
+if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux; fi
+
