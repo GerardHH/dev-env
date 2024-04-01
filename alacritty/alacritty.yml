@@ -16,6 +16,9 @@ font:
     style: Bold Italic
   size: 13
 
+# window:
+#   decorations: none # Enable when using window manager
+
 schemes:
   ### Catppuccin-Mocha ###
   Catppuccin-Mocha: &Catppuccin-Mocha
