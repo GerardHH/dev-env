@@ -48,6 +48,7 @@ in {
     pkgs.ripgrep
     pkgs.starship
     pkgs.tmux
+    pkgs.tree-sitter # Used by nvim-treesitter
     pkgs.util-linux
     pkgs.zoxide
     pkgs.zsh
