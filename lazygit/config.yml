@@ -13,6 +13,7 @@ confirmOnQuit: true
 quitOnTopLevelReturn: true
 disableStartupPopups: true
 gui:
+  showCommandLog: false
   nerdFontVersion: "2"
   # https://github.com/catppuccin/lazygit/blob/main/themes-mergable/mocha/blue.yml
   theme:
