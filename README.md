@@ -19,6 +19,7 @@ sudo apt install libspa-0.2-bluetooth
 systemctl --user restart pipewire.service
 ```
 To fix the not working Sony WH-1000XM5.
+5. nvim complained about `invalid node type at position`. Running `TSInstall all` seemed to fix it. It seemed to be using the one provided by nix.
 
 ## Bugs
 1. When installing for the first time, the Alacritty.desktop symlink in home.nix will terrorize the `home-manager switch` that is being done in `setup-dev-env.bash`. Comment it out and run `setup-dev-env.bash` again, after that comment the line in again and run `setup-dev-env.bash` again. The problem is about the file `Alacritty.desktop` not yet existing before it is installed, but home-manager will care.
