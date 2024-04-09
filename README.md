@@ -19,7 +19,7 @@ Use `home-manager switch` when changes are made to `home.nix`. Other configurati
 # Notes
 1. Install awesome on system.
 2. Install xclip (or other clipboard manager) from system. Some can't find libbsd if installed through nix.
-3. Use system terminal emulator (not nix installed one), to prevent bug 2.
+3. Use system terminal emulator (not nix installed one), to prevent bug 1.
 4. On Ubuntu 22.04:
 ```
 sudo apt install libspa-0.2-bluetooth
@@ -29,8 +29,7 @@ To fix the not working Sony WH-1000XM5.
 5. nvim complained about `invalid node type at position` for lua. Running `TSInstall all` in nvim seemed to fix it, so probably `TSInstall lua` should've done the trick too. It seemed to be using the one provided by nix.
 
 # Bugs
-1. `trace: warning: getExe: Package nixGL does not have the meta.mainProgram attribute. We'll assume that the main program has the same name for now, but this behavior is deprecated, because it leads to surprising errors when the assumption does not hold. If the package has a main program, please set `meta.mainProgram` in its definition to make this warning go away. Otherwise, if the package does not have a main program, or if you don't control its definition, use getExe' to specify the name to the program, such as lib.getExe' foo "bar".`
-2. GUI applications spawned from Alacritty (or any terminal emulator using nixGL), will have problems finding GL libraries:
+1. GUI applications spawned from Alacritty (or any terminal emulator using nixGL), will have problems finding GL libraries:
 ```
 /opt/ros/humble/lib/plotjuggler/plotjuggler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.38' not found (required by /nix/store/m3i46laviz11sywkad3xylq0ikwzfs29-libglvnd-1.7.0/lib/libGLX.so.0)
 /opt/ros/humble/lib/plotjuggler/plotjuggler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.38' not found (required by /nix/store/ga17mlfsss2fndyvp2s1m0s2rx2b4i9s-libX11-1.8.7/lib/libX11.so.6)
@@ -39,7 +38,7 @@ To fix the not working Sony WH-1000XM5.
 [ros2run]: Process exited with failure 1
 ```
 Because Alacritty uses nixGL (replaced the binary with a script), all GUI applications spawned from it may have these issues.
-5. pandas can't be found by python3 installed by home-manager.
+2. pandas can't be found by python3 installed by home-manager.
 
 # Whishlist
 1. Look into `clangd --path-mapping`
