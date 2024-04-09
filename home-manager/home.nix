@@ -82,6 +82,10 @@ in {
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+    # (pkgs.glibcLocales.override {
+    #   allLocales = false;
+    #   locales = ["en_US.UTF-8/UTF-8"];
+    # })
   ];
 
   home.file = {
@@ -101,7 +105,7 @@ in {
     ".ripgreprc".source = symlink "${HOME}/dev-env/ripgrep/.ripgreprc";
     ".zshrc".source = symlink "${HOME}/dev-env/zsh/.zshrc";
 
-    ".local/share/applications/Alacritty.desktop".source = symlink "${HOME}/.nix-profile/share/applications/Alacritty.desktop";
+    ".local/share/applications/Alacritty.desktop".source = symlink "${pkgs.alacritty}/share/applications/Alacritty.desktop";
 
     "bin".source = symlink "${HOME}/dev-env/bin";
   };
