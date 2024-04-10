@@ -46,6 +46,7 @@ in {
     pkgs.python3
     pkgs.python311Packages.pip
     pkgs.ripgrep
+    pkgs.rofi
     pkgs.starship
     pkgs.tmux
     pkgs.tree-sitter # Used by nvim-treesitter
@@ -97,6 +98,7 @@ in {
     ".config/lazygit".source = symlink "${HOME}/dev-env/lazygit";
     ".config/navi".source = symlink "${HOME}/dev-env/navi";
     ".config/nvim".source = symlink "${HOME}/dev-env/nvim";
+    ".config/rofi".source = symlink "${HOME}/dev-env/rofi";
     ".config/starship.toml".source = symlink "${HOME}/dev-env/starship/starship.toml";
     ".config/tmux".source = symlink "${HOME}/dev-env/tmux";
     ".config/zsh".source = symlink "${HOME}/dev-env/zsh";
