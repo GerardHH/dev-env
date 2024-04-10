@@ -338,7 +338,7 @@ local globalkeys = gears.table.join(
 
 	-- Prompt
 	awful.key({ modkey }, "r", function()
-		awful.screen.focused().mypromptbox:run()
+		awful.spawn.with_shell("~/.nix-profile/bin/rofi -show combi")
 	end, { description = "run prompt", group = "launcher" }),
 
 	awful.key({ modkey }, "x", function()
