@@ -20,7 +20,7 @@ require("mod.error_handling")
 
 -- {{{ Variable definitions
 local definitions = require("mod.definitions")
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init(definitions.theme)
 awful.layout.layouts = definitions.layouts
 -- }}}
 
