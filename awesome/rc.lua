@@ -61,4 +61,4 @@ require("mod.rules")
 require("mod.signals")
 -- }}}
 
-awful.spawn.once("setxkbmap -layout us")
+require("mod.auto_start")
