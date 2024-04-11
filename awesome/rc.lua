@@ -26,6 +26,7 @@ awful.layout.layouts = definitions.layouts
 -- }}}
 
 -- {{{ Menu
+local menu = require("mod.menu")
 
 -- Menubar configuration
 menubar.utils.terminal = definitions.terminal -- Set the terminal for applications that require it
@@ -38,7 +39,7 @@ require("mod.status_bar")
 -- {{{ Mouse bindings
 root.buttons(gears.table.join(
 	awful.button({}, 3, function()
-		mymainmenu:toggle()
+		menu.menu:toggle()
 	end),
 	awful.button({}, 4, awful.tag.viewnext),
 	awful.button({}, 5, awful.tag.viewprev)

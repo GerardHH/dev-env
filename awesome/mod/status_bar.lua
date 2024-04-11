@@ -4,7 +4,7 @@ local gears = require("gears")
 local wibox = require("wibox")
 
 local definitions = require("mod.definitions")
-local launcher_menu = require("mod.launcher_menu")
+local menu = require("mod.menu")
 
 -- Keyboard map indicator and switcher
 local mykeyboardlayout = awful.widget.keyboardlayout()
@@ -118,7 +118,7 @@ awful.screen.connect_for_each_screen(function(s)
 		layout = wibox.layout.align.horizontal,
 		{ -- Left widgets
 			layout = wibox.layout.fixed.horizontal,
-			launcher_menu,
+			menu.launcher,
 			s.mytaglist,
 			s.mypromptbox,
 		},

@@ -3,6 +3,7 @@ local gears = require("gears")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
 local definitions = require("mod.definitions")
+local menu = require("mod.menu")
 
 local modkey = definitions.modkey
 
@@ -21,7 +22,7 @@ M.globalkeys = gears.table.join(
 		awful.client.focus.byidx(-1)
 	end, { description = "focus previous by index", group = "client" }),
 	awful.key({ modkey }, "w", function()
-		mymainmenu:show()
+		menu.menu:show()
 	end, { description = "show main menu", group = "awesome" }),
 
 	-- Layout manipulation

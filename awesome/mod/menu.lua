@@ -4,6 +4,8 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 
 local definitions = require("mod.definitions")
 
+local M = {}
+
 -- Create a launcher widget and a main menu
 local myawesomemenu = {
 	{
@@ -23,11 +25,13 @@ local myawesomemenu = {
 	},
 }
 
-local mymainmenu = awful.menu({
+M.menu = awful.menu({
 	items = {
 		{ "awesome", myawesomemenu, beautiful.awesome_icon },
 		{ "open terminal", definitions.terminal },
 	},
 })
 
-return awful.widget.launcher({ image = beautiful.awesome_icon, menu = mymainmenu })
+M.launcher = awful.widget.launcher({ image = beautiful.awesome_icon, menu = M.menu })
+
+return M
