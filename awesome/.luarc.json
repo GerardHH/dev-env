@@ -8,6 +8,7 @@
             "client",
             "screen",
             "tag",
+            "root",
         ]
     },
     "workspace": {
