@@ -17,7 +17,11 @@ require("mod.error_handling")
 
 -- {{{ Variable definitions
 local definitions = require("mod.definitions")
-beautiful.init(definitions.theme)
+
+-- Themes define colours, icons, font and wallpapers.
+local theme = require("mod.theme")
+beautiful.init(theme)
+
 awful.layout.layouts = definitions.layouts
 -- }}}
 
