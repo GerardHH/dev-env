@@ -10,9 +10,6 @@ require("awful.autofocus")
 local beautiful = require("beautiful")
 -- Notification library
 local menubar = require("menubar")
--- Enable hotkeys help widget for VIM and other apps
--- when client with a matching name is opened:
-require("awful.hotkeys_popup.keys")
 
 -- {{{ Error handling
 require("mod.error_handling")
