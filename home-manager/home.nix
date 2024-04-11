@@ -43,6 +43,7 @@ in {
     pkgs.navi
     pkgs.neovim
     pkgs.nodejs_20
+    pkgs.polybar
     pkgs.python3
     pkgs.python311Packages.pip
     pkgs.ripgrep
@@ -98,6 +99,7 @@ in {
     ".config/lazygit".source = symlink "${HOME}/dev-env/lazygit";
     ".config/navi".source = symlink "${HOME}/dev-env/navi";
     ".config/nvim".source = symlink "${HOME}/dev-env/nvim";
+    ".config/polybar".source = symlink "${HOME}/dev-env/polybar";
     ".config/rofi".source = symlink "${HOME}/dev-env/rofi";
     ".config/starship.toml".source = symlink "${HOME}/dev-env/starship/starship.toml";
     ".config/tmux".source = symlink "${HOME}/dev-env/tmux";
