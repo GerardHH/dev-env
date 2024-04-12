@@ -6,6 +6,7 @@ local definitions = require("mod.definitions")
 local menu = require("mod.menu")
 
 local modkey = definitions.modkey
+local terminal = definitions.terminal
 
 local M = {}
 
@@ -88,8 +89,7 @@ M.globalkeys = gears.table.join(
 
 	-- Prompt
 	awful.key({ modkey }, "r", function()
-		awful.spawn.with_shell("rofi")
-		awful.spawn.with_shell("~/.nix-profile/bin/rofi -show combi")
+		awful.spawn("~/.nix-profile/bin/rofi -show combi")
 	end, { description = "run prompt", group = "launcher" }),
 
 	awful.key({ modkey }, "x", function()
