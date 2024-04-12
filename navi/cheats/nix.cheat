@@ -1,0 +1,4 @@
+% nix
+
+# Remove all broken links
+find . -xtype l -delete
