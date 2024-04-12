@@ -76,6 +76,12 @@ in {
     pkgs.shfmt
     pkgs.stylua
 
+    # WM
+    pkgs.blueberry
+    pkgs.networkmanagerapplet
+    pkgs.pavucontrol
+    pkgs.rofi
+
     # echo "Install debbuggers"
     # TODO
 

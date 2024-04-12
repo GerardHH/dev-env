@@ -48,9 +48,6 @@ M.globalkeys = gears.table.join(
 	end, { description = "go back", group = "client" }),
 
 	-- Standard program
-	awful.key({ modkey }, "Return", function()
-		awful.spawn(terminal)
-	end, { description = "open a terminal", group = "launcher" }),
 	awful.key({ modkey, "Control" }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
 	awful.key({ modkey, "Shift" }, "q", awesome.quit, { description = "quit awesome", group = "awesome" }),
 
@@ -87,23 +84,30 @@ M.globalkeys = gears.table.join(
 		end
 	end, { description = "restore minimized", group = "client" }),
 
-	-- Prompt
-	awful.key({ modkey }, "r", function()
-		awful.spawn("~/.nix-profile/bin/rofi -show combi")
-	end, { description = "run prompt", group = "launcher" }),
+	-- Applications
+	awful.key({ modkey, "Shift" }, "i", function()
+		awful.spawn(terminal .. " -e nmtui")
+	end, { description = "NetworkManager (nmtui)", group = "Applications" }),
 
-	awful.key({ modkey }, "x", function()
-		awful.prompt.run({
-			prompt = "Run Lua code: ",
-			textbox = awful.screen.focused().mypromptbox.widget,
-			exe_callback = awful.util.eval,
-			history_path = awful.util.get_cache_dir() .. "/history_eval",
-		})
-	end, { description = "lua execute prompt", group = "awesome" }),
-	-- Menubar
+	awful.key({ modkey }, "Return", function()
+		awful.spawn(terminal)
+	end, { description = "open a terminal", group = "Applications" }),
+
+	awful.key({ modkey }, "b", function()
+		awful.spawn.with_shell("blueberry")
+	end, { description = "Bluetooth control (blueberry)", group = "Applications" }),
+
+	awful.key({ modkey }, "i", function()
+		awful.spawn.with_shell("nm-connection-editor")
+	end, { description = "NetworkManager (nm-connection-editor)", group = "Applications" }),
+
 	awful.key({ modkey }, "p", function()
-		menu.menu:show()
-	end, { description = "show the menubar", group = "launcher" })
+		awful.spawn.with_shell("pavucontrol")
+	end, { description = "PulseAudio control (pavucontrol)", group = "Applications" }),
+
+	awful.key({ modkey }, "r", function()
+		awful.spawn.with_shell("~/.nix-profile/bin/rofi -show combi")
+	end, { description = "Application runner (rofi)", group = "Applications" })
 )
 
 -- Bind all key numbers to tags.
