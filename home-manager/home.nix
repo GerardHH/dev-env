@@ -28,7 +28,7 @@ in {
   home.stateVersion = "23.11"; # Can introduce breaking changes if changed
 
   home.packages = [
-    (nixGLWrap pkgs.alacritty)
+    # (nixGLWrap pkgs.alacritty) disabled until nixgl is fixed
     pkgs.bat
     pkgs.cargo
     pkgs.curl

@@ -13,9 +13,9 @@ curl -L https://nixos.org/nix/install | sh
 echo "Source nix"
 . ~/.nix-profile/etc/profile.d/nix.sh
 
-echo "Install nixGL"
-nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl && nix-channel --update
-nix-env -iA nixgl.auto.nixGLDefault # or replace `nixGLDefault` with your desired wrapper
+echo "Install nixGL (disabled until main is fixed, install applications on host for now)"
+# nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl && nix-channel --update
+# nix-env -iA nixgl.auto.nixGLDefault # or replace `nixGLDefault` with your desired wrapper
 
 echo "Install home-manager"
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager

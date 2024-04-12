@@ -17,7 +17,7 @@ This should setup the whole user system.
 Use `home-manager switch` when changes are made to `home.nix`. Other configuration files/folders are symlinks to the appropriate files/folders in the `dev-env`.
 
 # Notes
-1. Install awesome on system.
+1. Install awesome and alacritty on system.
 2. Install xclip (or other clipboard manager) from system. Some can't find libbsd if installed through nix.
 3. Use system terminal emulator (not nix installed one), to prevent bug 1.
 4. On Ubuntu 22.04:
