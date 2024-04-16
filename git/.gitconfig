@@ -42,13 +42,17 @@
     editor = vi
 [diff]
     wsErrorHighlight = all
+[difftool "vimdiff"]
+    cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
 [fetch]
     prune = true # prune on every fetch
 [interactive]
 	diffFilter = diff-so-fancy --patch
 [merge]
-    tool = kdiff3NoAuto
+    tool = vimdiff
     conflictstyle = diff3
+[mergetool "vimdiff"]
+    cmd = nvim -d \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
 [pull]
     rebase = true # use rebase strategy for git pull
 [pager]
