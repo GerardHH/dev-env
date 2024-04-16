@@ -32,7 +32,7 @@ in {
     pkgs.bat
     pkgs.cargo
     pkgs.curl
-    pkgs.diff-so-fancy
+    pkgs.delta
     pkgs.eza
     pkgs.fd
     pkgs.fzf

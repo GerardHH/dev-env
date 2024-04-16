@@ -40,14 +40,19 @@
 [core]
     autocrlf = input
     editor = vi
+    pager = delta
+[delta]
+    line-numbers = true
+    navigate = true
 [diff]
     wsErrorHighlight = all
+    colorMoved = default
 [difftool "vimdiff"]
     cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
 [fetch]
     prune = true # prune on every fetch
 [interactive]
-	diffFilter = diff-so-fancy --patch
+	diffFilter = delta --color-only
 [merge]
     tool = vimdiff
     conflictstyle = diff3
@@ -55,8 +60,6 @@
     cmd = nvim -d \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
 [pull]
     rebase = true # use rebase strategy for git pull
-[pager]
-    diff = diff-so-fancy | less --tabs=4 -RFXS --pattern '^(Date|added|deleted|modified): '
 [user]
 	name = Gerard Heshusius
 	email = gHeshusius@lely.com
