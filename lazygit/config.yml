@@ -38,3 +38,5 @@ gui:
       - '#cdd6f4'
     searchingActiveBorderColor:
       - '#f9e2af'
+os:
+  editPreset: 'nvim'
