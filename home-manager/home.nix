@@ -81,6 +81,7 @@ in {
     pkgs.networkmanagerapplet
     pkgs.pavucontrol
     pkgs.rofi
+    pkgs.variety
 
     # echo "Install debbuggers"
     # TODO

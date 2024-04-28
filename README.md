@@ -45,7 +45,6 @@ Because Alacritty uses nixGL (replaced the binary with a script), all GUI applic
 1. Look into `clangd --path-mapping`
 
 ## Awesome
-1. Background setter, preferably a new one every day (nitrogen).
 2. Rounded corners? Opacity? (picom).
 3. Go through all keybinding thoroughly.
 4. System  tray? (trayer with nm-applet, volumeicon)
