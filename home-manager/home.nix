@@ -43,7 +43,6 @@ in {
     pkgs.navi
     pkgs.neovim
     pkgs.nodejs_20
-    pkgs.polybar
     pkgs.python3
     pkgs.python311Packages.pip
     pkgs.ripgrep
@@ -52,6 +51,7 @@ in {
     pkgs.tmux
     pkgs.tree-sitter # Used by nvim-treesitter
     pkgs.util-linux
+    pkgs.yazi
     pkgs.zoxide
     pkgs.zsh
 
@@ -80,6 +80,7 @@ in {
     pkgs.blueberry
     pkgs.networkmanagerapplet
     pkgs.pavucontrol
+    pkgs.polybar
     pkgs.rofi
     pkgs.variety
 
@@ -110,6 +111,7 @@ in {
     ".config/rofi".source = symlink "${HOME}/dev-env/rofi";
     ".config/starship.toml".source = symlink "${HOME}/dev-env/starship/starship.toml";
     ".config/tmux".source = symlink "${HOME}/dev-env/tmux";
+    ".config/yazi".source = symlink "${HOME}/dev-env/yazi";
     ".config/zsh".source = symlink "${HOME}/dev-env/zsh";
     ".gitconfig".source = symlink "${HOME}/dev-env/git/.gitconfig";
     ".gitignore".source = symlink "${HOME}/dev-env/git/.gitignore";
