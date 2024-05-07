@@ -50,6 +50,7 @@ in {
     pkgs.starship
     pkgs.tmux
     pkgs.tree-sitter # Used by nvim-treesitter
+    pkgs.ueberzugpp # Used by yazi
     pkgs.util-linux
     pkgs.yazi
     pkgs.zoxide
