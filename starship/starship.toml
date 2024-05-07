@@ -1,4 +1,4 @@
-format = '$directory$git_branch$git_state$git_metrics$git_status$cmd_duration $character'
+format = '$directory$git_branch$git_state$git_metrics$git_status$cmd_duration${custom.yazi_shell} $character'
 
 [cmd_duration]
 format = '\[[⏱ $duration]($style)\]'
@@ -8,3 +8,10 @@ format = '\[[$symbol$branch]($style)\]'
 
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style))'
+
+[custom.yazi_shell]
+description = "Show yazi logo when in a yazi-subshell"
+when = "if [ ${YAZI_LEVEL:-0} -gt 0 ]; then exit 0; else exit 1; fi"
+command = "echo \" Yazi $YAZI_LEVEL\""
+style = "bold blue"
+format = "[\\[$output\\]]($style)"
