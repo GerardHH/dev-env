@@ -4,3 +4,6 @@
 [submodule "proprietary"]
     path = proprietary
     url = git@github.com:GerardHH/proprietary.git
+[submodule "yazi/plugins/keyjump.yazi"]
+	path = yazi/plugins/keyjump.yazi
+	url = https://github.com/DreamMaoMao/keyjump.yazi.git
