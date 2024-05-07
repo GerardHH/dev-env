@@ -1,3 +1,4 @@
+-- Render the 3 panes of content with a border surrounding them
 function Manager:render(area)
 	local chunks = self:layout(area)
 
@@ -25,4 +26,18 @@ function Manager:render(area)
 		-- Preview
 		Preview:render(chunks[3]:padding(ui.Padding.xy(1))),
 	})
+end
+
+-- Return the name of the selected item including the symlink pointer if applicable
+function Status:name()
+	local h = cx.active.current.hovered
+	if not h then
+		return ui.Span("")
+	end
+
+	local linked = ""
+	if h.link_to ~= nil then
+		linked = " -> " .. tostring(h.link_to)
+	end
+	return ui.Span(" " .. h.name .. linked)
 end
