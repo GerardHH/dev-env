@@ -1,3 +1,23 @@
+-- Show YAZI_LEVEL when detected
+function Header:yazi_level()
+	local yazi_level = os.getenv("YAZI_LEVEL")
+	if yazi_level ~= nil then
+		return ui.Span(string.format(" Yazi %d", yazi_level)):style({ fg = "blue", bold = true })
+	end
+end
+
+-- Render the header with the yazi level when applicable
+function Header:render(area)
+	self.area = area
+
+	local right = ui.Line({ self:yazi_level(), self:count(), self:tabs() })
+	local left = ui.Line({ self:cwd(math.max(0, area.w - right:width())) })
+	return {
+		ui.Paragraph(area, { left }),
+		ui.Paragraph(area, { right }):align(ui.Paragraph.RIGHT),
+	}
+end
+
 -- Render the 3 panes of content with a border surrounding them
 function Manager:render(area)
 	local chunks = self:layout(area)
