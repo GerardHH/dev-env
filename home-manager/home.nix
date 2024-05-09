@@ -30,6 +30,7 @@ in {
   home.packages = [
     # (nixGLWrap pkgs.alacritty) disabled until nixgl is fixed
     pkgs.bat
+    pkgs.btop
     pkgs.cargo
     pkgs.curl
     pkgs.delta
@@ -103,6 +104,7 @@ in {
   home.file = {
     ".config/alacritty".source = symlink "${HOME}/dev-env/alacritty";
     ".config/awesome".source = symlink "${HOME}/dev-env/awesome";
+    ".config/btop".source = symlink "${HOME}/dev-env/btop";
     ".config/clangd".source = symlink "${HOME}/dev-env/clangd";
     ".config/home-manager".source = symlink "${HOME}/dev-env/home-manager";
     ".config/kitty".source = symlink "${HOME}/dev-env/kitty";

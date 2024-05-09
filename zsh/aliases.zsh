@@ -1,6 +1,7 @@
 #!/bin/sh
 
 alias lg='lazygit'
+alias top='btop'
 alias vi='nvim'
 
 # easier to read disk
