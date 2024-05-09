@@ -48,6 +48,7 @@ in {
     pkgs.ripgrep
     pkgs.rofi
     pkgs.starship
+    pkgs.tldr
     pkgs.tmux
     pkgs.tree-sitter # Used by nvim-treesitter
     pkgs.ueberzugpp # Used by yazi
