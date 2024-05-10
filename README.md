@@ -45,13 +45,11 @@ Because Alacritty uses nixGL (replaced the binary with a script), all GUI applic
 1. Look into `clangd --path-mapping`
 
 ## Awesome
-2. Rounded corners? Opacity? (picom).
 3. Go through all keybinding thoroughly.
 4. System  tray? (trayer with nm-applet, volumeicon)
 5. Notification system? (Dunst)
 6. login manager? (lightdm)
 7. GUI filemanager? (PCManFM, thunar, nemo)
-7.1 Terminal filemanager? (yazi, Midnight Commander)
 8. GTK setter? (lxappearance)
 9. Lock screen?
 10. rofi extenstions:
