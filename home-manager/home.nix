@@ -83,6 +83,7 @@ in {
     pkgs.blueberry
     pkgs.networkmanagerapplet
     pkgs.pavucontrol
+    pkgs.picom
     pkgs.polybar
     pkgs.rofi
     pkgs.variety
@@ -111,6 +112,7 @@ in {
     ".config/lazygit".source = symlink "${HOME}/dev-env/lazygit";
     ".config/navi".source = symlink "${HOME}/dev-env/navi";
     ".config/nvim".source = symlink "${HOME}/dev-env/nvim";
+    ".config/picom".source = symlink "${HOME}/dev-env/picom";
     ".config/polybar".source = symlink "${HOME}/dev-env/polybar";
     ".config/rofi".source = symlink "${HOME}/dev-env/rofi";
     ".config/starship.toml".source = symlink "${HOME}/dev-env/starship/starship.toml";

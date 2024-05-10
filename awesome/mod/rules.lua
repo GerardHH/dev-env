@@ -1,4 +1,4 @@
-local beautiful = require("beautiful")
+-- local beautiful = require("beautiful")
 local awful = require("awful")
 
 local keys = require("mod.keys")
@@ -21,10 +21,10 @@ awful.rules.rules = {
 	{
 		rule = {},
 		except_any = { class = { "Polybar" } },
-		properties = {
-			border_width = beautiful.border_width,
-			border_color = beautiful.border_normal,
-			focus = awful.client.focus.filter,
-		},
+		-- properties = {
+		-- 	border_width = beautiful.border_width,
+		-- 	border_color = beautiful.border_normal,
+		-- 	focus = awful.client.focus.filter,
+		-- },
 	},
 }
