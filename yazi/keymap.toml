@@ -25,3 +25,8 @@ run = "plugin --sync arrow --args=1"
 on   = [ "J" ]
 run  = "plugin keyjump"
 desc = "Keyjump (Normal mode)"
+
+[[manager.prepend_keymap]]
+on   = [ "<F1>"]
+run  = "help"
+desc = "Help"
