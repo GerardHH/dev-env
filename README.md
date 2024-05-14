@@ -51,7 +51,7 @@ Because Alacritty uses nixGL (replaced the binary with a script), all GUI applic
 6. login manager? (lightdm)
 7. GUI filemanager? (PCManFM, thunar, nemo)
 8. GTK setter? (lxappearance)
-9. Lock screen?
+9. Lock screen? (gtklock)
 10. rofi extenstions:
     - rofi-wifi-menu
     - rofi-calc
