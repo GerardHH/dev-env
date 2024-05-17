@@ -1,7 +1,0 @@
-% nix
-
-# Update home
-nix-channel --update && home-manager switch
-
-# Remove all broken links
-find . -xtype l -delete
