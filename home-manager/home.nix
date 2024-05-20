@@ -47,7 +47,6 @@ in {
     pkgs.python3
     pkgs.python311Packages.pip
     pkgs.ripgrep
-    pkgs.rofi
     pkgs.starship
     pkgs.tldr
     pkgs.tmux
