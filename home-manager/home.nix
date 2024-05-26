@@ -87,6 +87,11 @@ in {
     pkgs.rofi
     pkgs.variety
 
+    # markdown to PDF
+    pkgs.ghostscript
+    pkgs.groff
+    pkgs.pandoc
+
     # echo "Install debbuggers"
     # TODO
 
