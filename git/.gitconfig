@@ -60,6 +60,10 @@
     cmd = nvim -d \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
 [pull]
     rebase = true # use rebase strategy for git pull
-[user]
-	name = Gerard Heshusius
-	email = gHeshusius@lely.com
+[includeIf "gitdir:~/**"]
+    path = ~/dev-env/proprietary/.gitconfig-personal
+[includeIf "gitdir:**/salsa_ws/**"]
+    path = ~/dev-env/proprietary/.gitconfig-lely
+[includeIf "gitdir:**/vector/**"]
+    path = ~/dev-env/proprietary/.gitconfig-lely
+
