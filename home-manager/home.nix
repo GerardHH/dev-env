@@ -11,7 +11,7 @@ in {
   home.username = "gerard";
   home.homeDirectory = "/home/gerard";
 
-  home.stateVersion = "23.11"; # Can introduce breaking changes if changed
+  home.stateVersion = "24.05"; # Can introduce breaking changes if changed
 
   home.packages = [
     # (nixGLWrap pkgs.alacritty) disabled until nixgl is fixed
@@ -50,7 +50,7 @@ in {
     pkgs.marksman
     pkgs.nixd
     pkgs.nodePackages.bash-language-server
-    pkgs.nodePackages.pyright
+    pkgs.pyright
     pkgs.ruff-lsp
 
     # Install static analyzers
