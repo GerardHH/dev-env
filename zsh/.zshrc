@@ -71,11 +71,14 @@ export FZF_DEFAULT_OPTS=" \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
+# Start up executions
+oh-my-posh disable notice
+
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(navi widget zsh)"
-eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/theme.toml)"
 # Auto start tmux if stdin is not a TTY and exit terminal on tmux exit
 if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux; fi
 

@@ -30,10 +30,10 @@ in {
     pkgs.navi
     pkgs.neovim
     pkgs.nodejs_20
+    pkgs.oh-my-posh
     pkgs.python3
     pkgs.python311Packages.pip
     pkgs.ripgrep
-    pkgs.starship
     pkgs.tldr
     pkgs.tmux
     pkgs.tree-sitter # Used by nvim-treesitter
@@ -102,10 +102,10 @@ in {
     ".config/lazygit".source = symlink "${HOME}/dev-env/lazygit";
     ".config/navi".source = symlink "${HOME}/dev-env/navi";
     ".config/nvim".source = symlink "${HOME}/dev-env/nvim";
+    ".config/oh-my-posh".source = symlink "${HOME}/dev-env/oh-my-posh";
     ".config/picom".source = symlink "${HOME}/dev-env/picom";
     ".config/polybar".source = symlink "${HOME}/dev-env/polybar";
     ".config/rofi".source = symlink "${HOME}/dev-env/rofi";
-    ".config/starship.toml".source = symlink "${HOME}/dev-env/starship/starship.toml";
     ".config/tmux".source = symlink "${HOME}/dev-env/tmux";
     ".config/yazi".source = symlink "${HOME}/dev-env/yazi";
     ".config/zsh".source = symlink "${HOME}/dev-env/zsh";
