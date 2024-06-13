@@ -17,7 +17,6 @@ M.modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 M.layouts = {
 	awful.layout.suit.spiral.dwindle,
-	awful.layout.suit.floating,
 }
 
 return M
