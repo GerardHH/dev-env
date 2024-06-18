@@ -1,0 +1,12 @@
+% docker
+
+# Clear builder cache (and everything else)
+docker builder prune
+
+# Compose run
+<docker_compose> run --rm <available_services> zsh
+
+$ config_location: echo "$HOME/dev-env/docker/compose.yaml"
+$ docker_compose: echo "docker compose --file <config_location>"
+$ available_services: <docker_compose> config --services
+
