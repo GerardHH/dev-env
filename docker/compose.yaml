@@ -6,4 +6,3 @@ services:
     build:
       context: .
       dockerfile: dev-env.Dockerfile
-    pull_policy: build # Always rebuild if necessary (still uses caching)

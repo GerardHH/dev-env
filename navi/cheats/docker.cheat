@@ -3,6 +3,9 @@
 # Clear builder cache (and everything else)
 docker builder prune
 
+# Compose build
+<docker_compose> build
+
 # Compose run
 <docker_compose> run --rm <available_services> zsh
 
