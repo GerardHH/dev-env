@@ -40,3 +40,6 @@ gui:
       - '#f9e2af'
 os:
   editPreset: 'nvim'
+keybinding:
+  universal:
+    optionMenu-alt1: "<F1>"
