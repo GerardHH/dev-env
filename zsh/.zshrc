@@ -55,6 +55,7 @@ source "$HOME/.config/zsh/proprietary/alias.zsh"
 source "$HOME/.config/zsh/proprietary/tasks.zsh"
 
 # Aliases
+alias ld='lazydocker'
 alias lg='lazygit'
 alias top='btop'
 alias vi='nvim'

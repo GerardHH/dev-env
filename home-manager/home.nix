@@ -25,6 +25,7 @@ in {
     pkgs.fzf
     pkgs.git
     pkgs.glibcLocales
+    pkgs.lazydocker
     pkgs.lazygit
     pkgs.lua
     pkgs.navi
@@ -99,6 +100,7 @@ in {
     ".config/clangd".source = symlink "${HOME}/dev-env/clangd";
     ".config/home-manager".source = symlink "${HOME}/dev-env/home-manager";
     ".config/kitty".source = symlink "${HOME}/dev-env/kitty";
+    ".config/lazydocker".source = symlink "${HOME}/dev-env/lazydocker";
     ".config/lazygit".source = symlink "${HOME}/dev-env/lazygit";
     ".config/navi".source = symlink "${HOME}/dev-env/navi";
     ".config/nvim".source = symlink "${HOME}/dev-env/nvim";
