@@ -6,3 +6,6 @@ services:
     build:
       context: .
       dockerfile: dev-env.Dockerfile
+    volumes:
+      - /home/$USER:/home/$USER:rw
+      - /nix:/nix:ro # Allow the user in container to find the symlinks created by home-manager
