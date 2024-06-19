@@ -90,8 +90,8 @@ M.globalkeys = gears.table.join(
 	end, { description = "NetworkManager (nmtui)", group = "Applications" }),
 
 	awful.key({ modkey }, "Return", function()
-		awful.spawn(terminal)
-	end, { description = "open a terminal", group = "Applications" }),
+		awful.spawn.with_shell("~/.nix-profile/bin/rofi -show combi")
+	end, { description = "Application runner (rofi)", group = "Applications" }),
 
 	awful.key({ modkey }, "b", function()
 		awful.spawn.with_shell("blueberry")
@@ -105,9 +105,9 @@ M.globalkeys = gears.table.join(
 		awful.spawn.with_shell("pavucontrol")
 	end, { description = "PulseAudio control (pavucontrol)", group = "Applications" }),
 
-	awful.key({ modkey }, "r", function()
-		awful.spawn.with_shell("~/.nix-profile/bin/rofi -show combi")
-	end, { description = "Application runner (rofi)", group = "Applications" })
+	awful.key({ modkey }, "t", function()
+		awful.spawn(terminal)
+	end, { description = "open a terminal", group = "Applications" })
 )
 
 -- Bind all key numbers to tags.
