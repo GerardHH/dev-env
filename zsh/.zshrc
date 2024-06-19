@@ -21,10 +21,6 @@ zinit light Aloxaf/fzf-tab
 # Load completions
 autoload -Uz compinit && compinit
 
-# Source Nix
-if [ -e /home/gerard/.nix-profile/etc/profile.d/hm-session-vars.sh ]; then . /home/gerard/.nix-profile/etc/profile.d/hm-session-vars.sh; fi
-if [ -e /home/gerard/.nix-profile/etc/profile.d/nix.sh ]; then . /home/gerard/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
 # Keybindings
 set -o vi
 bindkey '^p' history-search-backward
