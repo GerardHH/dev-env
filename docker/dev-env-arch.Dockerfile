@@ -1,4 +1,5 @@
-FROM archlinux:base-devel
+# FROM archlinux:base-devel
+FROM robertdebock/docker-archlinux-systemd
 
 ARG USER
 ARG USER_ID
@@ -11,7 +12,8 @@ RUN groupadd --gid ${GROUP_ID} ${USER} && useradd --create-home --uid ${USER_ID}
 RUN passwd -d ${USER} && echo "${USER} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # Pull and setup yay
-RUN sudo pacman -Syu --noconfirm && sudo pacman -S --noconfirm base-devel git && \
+RUN pacman -Syu --noconfirm && \
+    pacman -S --noconfirm base-devel git && \
     mkdir -p /tmp/yay-build && \
     chown ${USER}:${USER} /tmp/yay-build && \
     su - ${USER} -c "git clone https://aur.archlinux.org/yay.git /tmp/yay-build/yay" && \
@@ -26,10 +28,10 @@ RUN yay -Sy --needed --noconfirm \
     navi \
     ncurses \
     neovim \
+    oh-my-posh \
     tmux \
     zoxide \
     zsh
-# oh-my-posh \
 
 USER ${USER}
 
