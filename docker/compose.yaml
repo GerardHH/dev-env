@@ -5,7 +5,7 @@ services:
     image: dev-env-image:latest
     build:
       context: .
-      dockerfile: dev-env.Dockerfile
+      dockerfile: dev-env-ubuntu.Dockerfile
       args:
         USER: $USER
         USER_ID: ${USER_ID:-0}
