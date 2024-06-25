@@ -50,7 +50,7 @@ in {
     pkgs.lua-language-server
     pkgs.marksman
     pkgs.nixd
-    # pkgs.nodePackages.bash-language-server
+    pkgs.nodePackages.bash-language-server
     pkgs.pyright
     pkgs.ruff-lsp
 
