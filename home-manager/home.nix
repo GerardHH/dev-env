@@ -32,8 +32,6 @@ in {
     pkgs.neovim
     pkgs.nodejs_20
     pkgs.oh-my-posh
-    pkgs.python3
-    pkgs.python311Packages.pip
     pkgs.ripgrep
     pkgs.tldr
     pkgs.tmux
