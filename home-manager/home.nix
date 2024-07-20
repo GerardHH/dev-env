@@ -51,6 +51,7 @@ in {
     pkgs.nodePackages.bash-language-server
     pkgs.pyright
     pkgs.ruff-lsp
+    pkgs.rust-analyzer
 
     # Install static analyzers
     pkgs.mypy
@@ -60,6 +61,7 @@ in {
     # Install formatters
     pkgs.alejandra
     pkgs.black
+    pkgs.rustfmt
     pkgs.shfmt
     pkgs.stylua
 
