@@ -45,10 +45,14 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:*:*' fzf-preview 'less ${(Q)realpath}'
 export LESSOPEN='|~/.config/zsh/lessfilter %s'
 
-# Local sources
+# Sources
 source "$HOME/.config/zsh/plugins/eza.zsh"
 source "$HOME/.config/zsh/proprietary/alias.zsh"
 source "$HOME/.config/zsh/proprietary/tasks.zsh"
+local CARGO="$HOME/.cargo/env"
+if [ -e $CARGO ]; then
+    source $CARGO
+fi
 
 # Aliases
 alias ld='lazydocker'
