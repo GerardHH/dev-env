@@ -62,7 +62,7 @@
     rebase = true # use rebase strategy for git pull
 [includeIf "gitdir:~/**"]
     path = ~/dev-env/proprietary/.gitconfig-personal
-[includeIf "gitdir:**/salsa_ws/**"]
+[includeIf "gitdir:**/vectorv2/**"]
     path = ~/dev-env/proprietary/.gitconfig-lely
 [includeIf "gitdir:**/vector/**"]
     path = ~/dev-env/proprietary/.gitconfig-lely
