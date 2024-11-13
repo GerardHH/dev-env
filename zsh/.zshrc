@@ -23,8 +23,12 @@ autoload -Uz compinit && compinit
 
 # Keybindings
 set -o vi
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
+
+autoload -Uz history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey '^p' history-beginning-search-backward-end
+bindkey '^n' history-beginning-search-forward-end
 
 # History
 HISTSIZE=5000
@@ -81,5 +85,5 @@ eval "$(navi widget zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/theme.toml)"
 # Auto start tmux if stdin is not a TTY and exit terminal on tmux exit
-if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux; fi
+# if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux; fi
 
